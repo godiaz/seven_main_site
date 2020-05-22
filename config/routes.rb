@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users, path_names: { sign_in: 'login' }
+  get :contact, to: 'pages#contact'
+  post :contact, to: 'pages#mail_contact'
   resources :projects, only: %i[index show]
   namespace :admin do
     authenticate :user, ->(user) { user.admin? } do

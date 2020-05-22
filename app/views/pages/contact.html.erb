@@ -1,0 +1,12 @@
+<div class="container">
+  <%= simple_form_for :contact, url: contact_path, method: :post do |f| %>
+    <%= f.input :name, required: false %>
+    <%= f.input :email, required: false %>
+    <%= f.input :phone, required: false %>
+    <%= f.input :location, required: false %>
+    <%= f.input :message, as: :text, required: false, input_html: { rows: 10 } %>
+    <%= f.input :attachment, as: :file, required: false %>
+    <%= f.submit, 'Submit' %>
+  <% end %>
+</div>
+  

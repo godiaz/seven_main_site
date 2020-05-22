@@ -1,0 +1,131 @@
+// h1 {
+//   @include for-large-devices-down {
+//     font-size: 36px;
+//   }
+//   @include for-medium-devices-down {
+//     font-size: 32px;
+//   }
+//   @include for-small-devices-down {
+//     font-size: 28px;
+//   }
+//   @include for-phone-only {
+//     font-size: 24px;
+//   }
+.white {
+  color: white;
+  &:hover {
+    color: white;
+  }
+}
+.crossed {
+  background-color: $yellow-superfade;
+}
+.yellow {
+  color: $yellow;
+}
+.green {
+  color: green;
+}
+.pb-30 {
+  padding-bottom: 30px;
+}
+.mt-10 {
+  margin-top: 10px;
+}
+.icon {
+  cursor: pointer;
+}
+.red {
+  color: #BF0A30;
+}
+.red-bg {
+  background-color: red;
+}
+// h2 {
+//   @include for-large-devices-down {
+//     font-size: 28px;
+//   }
+//   @include for-medium-devices-down {
+//     font-size: 24px;
+//   }
+//   @include for-small-devices-down {
+//     font-size: 20px;
+//   }
+//   @include for-phone-only {
+//     font-size: 16px;
+//   }
+// }
+
+// h3 {
+//   @include for-large-devices-down {
+//     font-size: 24px;
+//   }
+//   @include for-medium-devices-down {
+//     font-size: 20px;
+//   }
+//   @include for-small-devices-down {
+//     font-size: 16px;
+//   }
+//   @include for-phone-only {
+//     font-size: 16px;
+//   }
+// }
+
+// h4 {
+//   @include for-large-devices-down {
+//     font-size: 22px;
+//   }
+//   @include for-medium-devices-down {
+//     font-size: 20px;
+//   }
+//   @include for-small-devices-down {
+//     font-size: 18px;
+//   }
+//   @include for-phone-only {
+//     font-size: 16px;
+//   }
+// }
+
+// h5 {
+//   @include for-large-devices-down {
+//     font-size: 18px;
+//   }
+//   @include for-medium-devices-down {
+//     font-size: 18px;
+//   }
+//   @include for-small-devices-down {
+//     font-size: 16px;
+//   }
+//   @include for-phone-only {
+//     font-size: 14px;
+//   }
+// }
+
+// h6 {
+//   @include for-large-devices-down {
+//     font-size: 16px;
+//   }
+//   @include for-medium-devices-down {
+//     font-size: 16px;
+//   }
+//   @include for-small-devices-down {
+//     font-size: 14px;
+//   }
+//   @include for-phone-only {
+//     font-size: 12px;
+//   }
+// }
+
+// p {
+//   font-size: 15px;
+//   @include for-phone-only {
+//     font-size: 12px;
+//   }
+// }
+
+// a {
+//   font-size: 14px;
+//   @include for-phone-only {
+//     font-size: 12px;
+//   }
+// }

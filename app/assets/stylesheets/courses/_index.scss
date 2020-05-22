@@ -1,0 +1,376 @@
+@import 'show';
+.grey-hold {
+  padding: 20px;
+  width: 100%;
+  background-color: rgba(0,0,0,0.05)
+}
+.shadow-hold {
+  padding: 20px;
+  width: 100%;
+  box-shadow: 2px 2px 4px $gray-fade;
+  @media (max-width: 450px) {
+    padding: 10px;
+  }
+}
+.green-hold {
+  padding: 0px;
+  width: 100%;
+}
+
+.pt-20 {
+  padding-top: 10vh;
+}
+.pr-30 {
+  padding-right: 30px;
+}
+.pv-30 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.pv-30 {
+  padding-bottom: 30px;
+}
+.mt-30 {
+  margin-top: 30px;
+  @media (max-width: 450px) {
+    margin-top: 15px;
+  }
+}
+.hidden {
+  display: none;
+}
+.card-image {
+  width: 100%;
+}
+.course-title {
+  padding: 10px 0 0px 0;
+  border-bottom: 2px solid $green;
+  color: $blue;
+  margin-bottom: 5px;
+}
+.course-price {
+  color: gray;
+}
+a:hover {
+  text-decoration: none;
+}
+.pb-60 {
+  padding-bottom: 60px;
+}
+.w80 {
+  width: 80%;
+}
+.w50 {
+  width: 50%;
+}
+.fs {
+  align-items: flex-start;
+}
+.photo-hol {
+  padding: 10px 10px 10px 10px;
+}
+.white-bg {
+  padding: 10px;
+  padding-left: 30px;
+  background-color: white;
+  margin-bottom: 10px;
+}
+.white-bgnp {
+  padding: 10px;
+  background-color: white;
+  margin-bottom: 10px;
+}
+.mv-30 {
+  margin: 30px 0px 30px 0px;
+}
+
+
+/* Tooltip container */
+// .tt {
+//   position: relative;
+// }
+
+// /* Tooltip text */
+// .tt .tooltiptext {
+//   visibility: hidden;
+//   width: 150px;
+//   background-color: $green-hover;
+//   color: #fff;
+//   text-align: center;
+//   padding: 5px 0;
+//   border-radius: 6px;
+//   bottom: 150%;
+//   left: calc(50% - 75px);
+//   /* Position the tooltip text - see examples below! */
+//   position: absolute;
+//   z-index: 1;
+// }
+// .tt .tooltiptext::after {
+//   content: "";
+//   position: absolute;
+//   top: 100%;
+//   left: 50%;
+//   margin-left: -5px;
+//   border-width: 5px;
+//   border-style: solid;
+//   border-color: $green-hover transparent transparent transparent;
+// }
+// /* Show the tooltip text when you mouse over the tooltip container */
+// .tt:hover .tooltiptext {
+//   visibility: visible;
+// }
+.top {
+  align-items: flex-start !important;
+}
+.pt-10 {
+  padding-top: 10px;
+}
+.w-100-50 {
+  width: 50%;
+  @media (max-width: 991.98px) {
+    width: 100%
+  }
+}
+.mt-0-400 {
+  margin-top: 30px;
+  @media (max-width: 991.98px) {
+    margin-top: 0px;
+    padding-left: 0px;
+  }
+}
+.pl-30-0 {
+  padding-left: 40px;
+  @media (max-width: 991.98px) {
+    padding-left: 0px;
+  }
+}
+.voucher {
+  background-color: $yellow-superfade;
+  padding: 6px 10px;
+  max-width: 450px;
+  border-radius: 3px;
+  border: 1px solid $yellow-fade;
+  cursor: pointer;
+  text-align: center;
+  @media (max-width: 400px) {
+    font-size: 12px;
+  }
+}
+.white-imp {
+  color: white !important;
+}
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+  opacity: 0.8;
+}
+
+.crossed {
+  background-color: $yellow-superfade;
+}
+
+.un-minh {
+  min-height: unset;
+}
+.blue-btn {
+  background-color: $blue-fade;
+  color: white !important;
+  &:hover {
+    opacity: 0.9;
+  }
+  &.active {
+    color: #495057 !important;
+  }
+}
+.yellow-btn {
+  background-color: $yellow-fade;
+  color: white !important;
+  &:hover {
+    opacity: 0.9;
+  }
+  &.active {
+    color: #495057 !important;
+  }
+}
+.yellow-fake-btn {
+  background-color: $yellow-fade;
+  color: white !important;
+  cursor: none;
+}
+.green-btn {
+  background-color: $green-fade;
+  color: white !important;
+  &:hover {
+    opacity: 0.9;
+  }
+  &.active {
+    color: #495057 !important;
+  }
+}
+.red-btn {
+  background-color: $red-fade;
+  color: white !important;
+  &:hover {
+    opacity: 0.9;
+  }
+  &.active {
+    color: #495057 !important;
+  }
+}
+.p-20-10 {
+  padding-top: 20px;
+}
+.min-nav {
+  min-height: calc(100vh - 80px;);
+}
+// .man-hide {
+//   width: 0px;
+//   height: 0px;
+//   border: none !important;
+// }
+.flex-hide {
+  @media (max-width: 991.98px) {
+    display: none;
+  }
+}
+.flex-switch {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  width: 20%;
+  padding-right: 30px;
+  @media (max-width: 991.98px) {
+    padding-bottom: 10px;
+    padding-right: 0px;
+    flex-direction: row;
+    width: 100%
+  }
+}
+.link-switch {
+  width: 100%;
+  @media (max-width: 991.98px) {
+    width: 25%;
+    font-size: 12px;
+    padding: 5px;
+  }
+}
+.full-v {
+  width: 100%;
+  max-width: unset;
+}
+.pv-30-10 {
+  @media (max-width: 991.98px) {
+    padding: 10px 0px;
+  }
+}
+.voucher-form {
+  width: 50%;
+  max-width: 450px;
+  padding-left: 10px;
+  @media (max-width: 991.98px) {
+    padding-left: 0px;
+    width: 100%;
+  }
+}
+.flexi_input {
+  width: 100% !important;
+}
+.voucher-btn {
+  width: 15%;
+  @media (max-width: 380px) {
+    padding: 5px 0px;
+  }
+}
+.voucher_sent_to {
+  width: 85%;
+}
+.flex-tab {
+  @media (max-width: 800px) {
+    margin-left: 5px;
+  }
+  @media (max-width: 540px) {
+    margin-left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.flex-item {
+  @media (max-width: 540px) {
+    width: 25%;
+  }
+}
+.hide-540 {
+  @media (max-width: 540px) {
+    display: none;
+  }
+}
+.show-540 {
+  display: none;
+  @media (max-width: 540px) {
+    display: block;
+    padding-left: 5px;
+  }
+}
+.flex-lm {
+  p {
+    display: none;
+  }
+  @media (max-width: 768px) {
+    font-size: 12px;
+    margin-left: 0px;
+  }
+  @media (max-width: 573px) {
+    i {
+      display: none;
+    }
+    p {
+      display: block;
+    }
+  }
+}
+.cert-img {
+  width: 80px;
+  @media (max-width: 400px) {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+.cert-hold {
+  @media (max-width: 769px) {
+    flex-direction: column;
+    a {
+      margin-top: 15px;
+    }
+    .flex-start {
+      width: 100%;
+    }
+  }
+  @media (max-width: 400px) {
+    .pl-15 {
+      padding-left: 0px;
+    }
+    .flex-start {
+      flex-wrap: wrap;
+    }
+  }
+}
+.high-input {
+  height: 150px !important;
+  padding-top: 16px !important;
+  margin-bottom: 30px !important;
+}
+.welcome-text {
+  padding: 3rem 3rem;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  @media (max-width: 769px) {
+    font-size: 14px;
+    padding: 2rem 1rem 2rem 1rem;
+  }
+}
+.blueimp {
+  color: $blue !important;
+}
+.fwnorm {
+  font-weight: normal !important;
+}

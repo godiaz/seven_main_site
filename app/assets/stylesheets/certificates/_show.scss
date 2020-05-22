@@ -1,0 +1,57 @@
+.cert-ob {
+  border: 4px solid $green-fade;
+  padding: 10px;
+}
+.cert-ib {
+  border: 4px solid $blue;
+  padding: 20px;
+  position: relative;
+}
+.cert-btm-img {
+  width: 100%;
+}
+.w40 {
+  width: 40%;
+  p {
+    font-size: 12px;
+  }
+}
+.blct {
+  position: absolute;
+  bottom: 0;
+  left: 10;
+  width: 39%;
+}
+.brct {
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 15;
+  width: 39%;
+}
+.aibtm {
+  align-items: flex-end;
+}
+.autograph {
+  width: 80%;
+}
+.mr-10 {
+  margin-right: 10px;
+}
+.bih {
+  width: 20%;
+  padding: 0 10px;
+}
+.certbgimg {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -20;
+  height: 100%;
+}
+.certificate {
+  width: 300px;
+  height: 200;
+  cursor-events: none;
+}

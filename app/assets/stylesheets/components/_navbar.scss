@@ -1,12 +1,31 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #387E87;
+  min-height: 80px;
+  position: relative;
+  z-index: 5;
+  align-items: flex-start;
+  padding-top: 18px;
+}
+
+#navbarSupportedContent {
+  background: #387E87;
+  @include for-phone-only {
+    position: relative;
+    top: 8px;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.seven-logo {
+  width: 120px;
+}
+
+.nav-link {
+  font-weight: bold;
+  margin-left: 20px;
+  font-size: 14px;
 }

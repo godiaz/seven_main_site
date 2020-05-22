@@ -1,2 +1,60 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="top-banner top" style="background-image: url(<%= asset_path('home.png') %>); background-size: cover; background-position: center;">
+  <div class="banner-text pt-60">
+    <h1 class="text-center white"><strong>Welcome to Seven Academy</strong></h1>
+    <h5 class="text-center white fwnorm">Online Training and CPD for building designers</h5>
+  </div>
+</div>
+<h5 class="grey welcome-text">Our courses are aimed at Architects, Engineers, Contractors, Project managers, Surveyors and Energy Assessors. <br><br> Each course will walk you through Government policy and regulatory requirements, discuss guidance available from industry professional bodies and provide practical guidance based on 20 years of experience from our day to day consulting activities. <br><br> Our courses are accredited so you can be sure our courses adhere to the CPD standards of your professional
+body, whether that be RIBA, CIBSE or RICS.</h5>
+<%= render 'shared/courses_cards', courses: @courses, title: "", nopad: true %>
+<div class="d-flex justify-content-center mt-3 mb-3">
+  <%= link_to courses_path do %>
+    <div class="seven-button secondary">
+      <p class="m-0 text-center">View All Courses</p>
+    </div>
+  <% end %>
+</div>
+
+
+<h3 class="pt-30 lighter text-center blue"><strong>ARE YOU AN EMPLOYER?</strong></h3>
+<h5 class="grey welcome-text">Online CPD courses are a great way to ensure your staff meets the CPD requirements of their professional bodies in the most time efficient and cost efficient manner. <br><br> Our courses are designed to provide knowledge and practical guidance about subjects regularly faced by design teams. These courses are aimed at Architects, Engineers, Contractors, Project managers, Surveyors and Energy Assessors. They are accredited CPD courses recognised by RIBA, CIBSE, RICS. IMechE and IET. <br><br> We offer Bulk discounts for multiple purchases and a robust, simple and efficient system for you to distribute the courses to your staff, monitor their progress and ensure they benefit from the learning outcomes of each course whilst working towards their annual CPD requirements. <br><br>
+To find out more, visit our employer page…</h5>
+<div class="d-flex justify-content-center mt-3">
+  <%= link_to employers_path do %>
+    <div class="seven-button secondary">
+      <p class="m-0 text-center">Employers</p>
+    </div>
+  <% end %>
+</div>
+<!-- <div class="testimonial-container">
+  <div class="container">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="testimonial">
+            <h3 class="text-center">TESTIMONIAL ONE</h3>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="testimonial">
+            <h3 class="text-center">TESTIMONIAL TWO</h3>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="testimonial">
+            <h3 class="text-center">TESTIMONIAL THREE</h3>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+</div> -->
+<%= render 'shared/partners_and_accreditations' %>

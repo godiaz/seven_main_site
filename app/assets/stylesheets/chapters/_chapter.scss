@@ -25,5 +25,18 @@
   z-index: 20;
 }
 .rich {
-  height: 100vh;
+  max-height: 100vh;
+  min-height: 50vh;
+  overflow-y: scroll;
+  margin-bottom: 15px;
+}
+.attachment__caption {
+  display: none !important;
+}
+trix-toolbar .button_group button[data-trix-attribute=red] {
+  color: red;
+}
+
+trix-toolbar .button_group button[data-trix-attribute=comic] {
+  font-family: "Comic Sans MS";
 }

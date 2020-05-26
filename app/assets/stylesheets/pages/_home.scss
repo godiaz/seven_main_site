@@ -122,9 +122,6 @@ body {
 .testimonial {
   height: 300px;
   width: 100%;
-  @include for-small-devices-up {
-    width: 50%;
-  }
   background: #BBBBBB;
   display: flex;
   justify-content: center;

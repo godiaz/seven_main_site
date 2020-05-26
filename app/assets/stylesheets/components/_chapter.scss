@@ -1,6 +1,6 @@
 .chapter {
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 #buttons {
   pointer-events: none !important;
@@ -17,7 +17,7 @@
 .chapter-holder {
   width: 100%;
   padding: 2rem;
-  height: 100vh;
+  max-height: 100vh;
   overflow-y: scroll;
   background-color: $yellow-superfade;
   -webkit-user-select: none;
@@ -29,4 +29,23 @@
 }
 .pl-30 {
   padding-left: 30px;
+}
+.blue-trix {
+  background-color: $blue;
+  color: white;
+}
+.green-trix {
+  background-color: $green;
+  color: white;
+}
+.unsets {
+  max-height: unset;
+  overflow-y: unset;
+}
+.trix-content em {
+  font-style: normal !important;
+  color: $blue;
+}
+.trix-content del {
+  text-decoration: underline;
 }

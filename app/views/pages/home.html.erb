@@ -71,10 +71,100 @@
     </div>
   <% end %>
 </div>
-<%= link_to "MORE ABOUT OUR SERVICES >>", services_path, class: "text-center roboto grey letter-spaced bold d-block" %>
+<%= link_to "MORE ABOUT OUR SERVICES >>", services_path, class: "text-center roboto grey letter-spaced bold d-block mb-5" %>
 
-
-
-
+<div class="project-carousel-holder">
+  <div class="project-carousel pos-one">
+    <div class="project-card" style="background-color: yellow"></div>
+    <div class="project-card" style="background-color: red"></div>
+    <div class="project-card" style="background-color: blue"></div>
+    <div class="project-card" style="background-color: red"></div>
+    <div class="project-card" style="background-color: blue"></div>
+    <div class="project-card" style="background-color: red"></div>
+    <div class="project-card" style="background-color: blue"></div>
+    <div class="project-card" style="background-color: red"></div>
+    <div class="project-card" style="background-color: green"></div>
+  </div>
+  <div class="project-carousel pos-two">
+    <div class="project-card" style="background-color: purple"></div>
+    <div class="project-card" style="background-color: grey"></div>
+    <div class="project-card" style="background-color: black"></div>
+    <div class="project-card" style="background-color: red"></div>
+    <div class="project-card" style="background-color: black"></div>
+    <div class="project-card" style="background-color: red"></div>
+    <div class="project-card" style="background-color: black"></div>
+    <div class="project-card" style="background-color: red"></div>
+    <div class="project-card" style="background-color: orange"></div>
+  </div>
+</div>
 
 <%= render 'shared/partners_and_accreditations' %>
+
+<script>
+  const one = document.querySelector('.pos-one')
+  const two = document.querySelector('.pos-two')
+  let oneCounter = 0
+  let twoCounter = 0
+  let oneDontMove = false
+  let twoDontMove = false
+
+  setInterval(
+     function() {
+      if(oneCounter == one.children.length) {
+        if(oneDontMove == false) {
+          one.style.display = 'none'
+        }
+        two.style.display = "flex"
+        one.style.left = '0'
+        twoCounter += 1
+        if(two.style.left == 0) {
+          two.style.left = `-33.333vw`
+        } else {
+          if(twoCounter == two.children.length) {
+            oneCounter = 0
+            oneDontMove = false
+            twoCounter = 0
+            twoDontMove = false
+            if(twoDontMove == false) {
+              two.style.display = "none"
+            }
+            one.style.zIndex = 1
+            two.style.left = '0'
+          } else {
+            two.style.left = `${parseFloat(two.style.left.split('v')[0], 10) - 33.333}vw`
+            if(twoCounter == two.children.length - 3) {
+              one.style.display = 'flex'
+              one.style.zIndex = 0
+              oneDontMove = true
+            }
+          }
+        }
+      } else {
+        oneCounter += 1
+        if(one.style.left == 0) {
+          one.style.left = `-33.333vw`
+        } else {
+          one.style.left = `${parseFloat(one.style.left.split('v')[0], 10) - 33.333}vw`
+          if(oneCounter == one.children.length - 3) {
+            two.style.display = 'flex'
+            two.style.zIndex = 0
+            twoDontMove = true
+          }
+        }
+      }
+     }
+  , 3000);
+</script>
+
+<!-- <script>
+  const carousel = document.querySelector('.project-carousel')
+  setInterval(
+     function() {
+      if(carousel.style.left == 0) {
+        carousel.style.left = `-33.333vw`
+      } else {
+        carousel.style.left = `${parseFloat(carousel.style.left.split('v')[0], 10) - 33.333}vw`
+      }
+     }
+  , 2000);
+</script> -->

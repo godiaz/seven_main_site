@@ -1,12 +1,16 @@
-<%= simple_form_for [:admin, project] do |f| %>
-  <%= f.input :name %>
-  <%= f.input :location %>
-  <%= f.input :client %>
-  <%= f.input :architect %>
-  <%= f.input :services %>
-  <%= f.input :content, input_html: { rows: 10 } %>
-  <%= f.input :banner %>
-  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-  <%= f.submit %>
-<% end %>
-  
+<div class="row pv-30">
+  <div class="col-sm-12 col-md-8 offset-md-2">
+    <h3 class="pb-30">NEW PROJECT</h3>
+    <%= simple_form_for [:admin, project] do |f| %>
+      <%= f.input :name %>
+      <%= f.input :location %>
+      <%= f.input :client %>
+      <%= f.input :architect %>
+      <%= f.input :services, collection: @services %>
+      <%= f.input :content, input_html: { rows: 10 } %>
+      <%= f.input :banner %>
+      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>

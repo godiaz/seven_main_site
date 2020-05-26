@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: #387E87;
+  background: $blue;
   min-height: 80px;
   position: relative;
   z-index: 5;
@@ -9,7 +9,7 @@
 }
 
 #navbarSupportedContent {
-  background: #387E87;
+  background: $blue;
   @include for-phone-only {
     position: relative;
     top: 8px;
@@ -28,4 +28,5 @@
   font-weight: bold;
   margin-left: 20px;
   font-size: 14px;
+  color: white;
 }

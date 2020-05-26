@@ -11,29 +11,20 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item flex-center active">
-          <%= link_to "ACADEMY", root_path, class: "nav-link white-imp flex-lm" %>
+          <%= link_to "HOME", root_path, class: "nav-link white-imp flex-lm" %>
         </li>
         <li class="nav-item flex-center active">
-          <%= link_to "COURSES", courses_path, class: "nav-link white-imp flex-lm" %>
+          <%= link_to "SERVICES", services_path, class: "nav-link white-imp flex-lm" %>
         </li>
         <li class="nav-item flex-center active">
-          <%= link_to "EMPLOYERS", employers_path, class: "nav-link white-imp flex-lm" %>
+          <%= link_to "PROJECTS", projects_path, class: "nav-link white-imp flex-lm" %>
         </li>
         <li class="nav-item flex-center active">
-          <%= link_to "CONSULTANCY", "https://7consulting.co.uk/", class: "nav-link white-imp flex-lm", target: "_blank" %>
+          <%= link_to "ACADEMY", "https://sevenacademy.co.uk/", class: "nav-link white-imp flex-lm", target: "_blank" %>
         </li>
-        <% if user_signed_in? %>
-          <li class="nav-item flex-center active">
-            <%= link_to my_courses_path, class: "nav-link white-imp flex-lm" do %>
-             <i class="fas fa-user-circle" style="font-size: 1.75rem;"></i>
-             <p>MY ACCOUNT</p>
-            <% end %>
-          </li>
-        <% else %>
-          <li class="nav-item flex-center active">
-            <%= link_to "LOGIN", new_user_session_path, class: "nav-link white-imp flex-lm" %>
-          </li>
-        <% end %>
+        <li class="nav-item flex-center active">
+          <%= link_to "CONTACT", contact_path, class: "nav-link white-imp flex-lm" %>
+        </li>
       </ul>
     </div>
   </div>

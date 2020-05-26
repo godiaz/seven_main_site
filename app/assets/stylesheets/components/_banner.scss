@@ -9,15 +9,32 @@
     min-height: 350px;
   }
 }
-
+h1 {
+  @include for-small-devices-down {
+    font-size: 2rem;
+  }
+}
+h5 {
+  @include for-small-devices-down {
+    font-size: 1rem;
+  }
+}
 .banner-text {
-  width: 50%;
-  @include for-medium-devices-down {
-    width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 225px;
+  @include for-small-devices-down {
+    min-height: 175px;
   }
-  @include for-medium-devices-down {
-    width: 80%;
-  }
+  // @include for-medium-devices-down {
+  //   width: 60%;
+  // }
+  // @include for-medium-devices-down {
+  //   width: 80%;
+  // }
   h1 {
     color: #FFF;
     font-weight: lighter;

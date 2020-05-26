@@ -1,47 +1,21 @@
-// Specific CSS for your home-page
-body {
-  max-width: 1440px;
-  margin: 0 auto;
+.services-container-home {
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  @media only screen and (min-width: 700px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media only screen and (min-width: 1280px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
 }
 
-.min-height {
-  min-height: calc(100vh - 410px);
-}
-.flex-cent {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-.bluee {
-  text-align: center;
-  color: $blue !important;
-  margin-left: 0px;
-}
-.bluee.active {
-  color: white !important;
-}
-.tab-content {
-  flex: 1 0 auto;
-}
 
-.tab-pane {
-  height: 100%;
-  min-height: 50vh;
-}
-.ml-30 {
-  margin-left: 30px;
-}
-.pl-15 {
-  padding-left: 15px;
-}
 .partners-and-accreditations-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 80px 20px;
   h3 {
-    color: #3A71A7;
     font-weight: lighter;
   }
   p {
@@ -88,65 +62,4 @@ body {
 .pa-image-seven {
   height: 50px;
   margin: 0px 20px 20px 20px;
-}
-
-//
-
-.latest-courses-container, .employer-container, .testimonial-container {
-  padding: 60px 0;
-}
-
-.new_course_card {
-  width: 100%;
-}
-
-.courses-card {
-  background: linear-gradient(#BBFFFF, #56BDBD);
-  height: 200px;
-  padding: 16px;
-  margin: 15px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  h4 {
-    color: #FFF;
-    margin-top: 12px;
-  }
-}
-
-.button-container {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.testimonial {
-  height: 300px;
-  width: 100%;
-  background: #BBBBBB;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  h3 {
-    @include for-phone-only {
-      font-size: 20px;
-    }
-  }
-}
-
-.flex-btwn {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.flex-end {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.icon {
-  font-size: 20px;
-  padding: 10px;
 }

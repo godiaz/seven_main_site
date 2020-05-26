@@ -3,3 +3,5 @@
 <%= simple_format @project.content %>
 
 <%= link_to @project.published ? 'Unpublish' : 'Publish' , publish_admin_project_path(@project), method: :patch %>
+
+<%= render "shared/project" %>

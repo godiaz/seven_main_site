@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home ]
+  skip_before_action :authenticate_user!, only: [ :home, :mail_contact, :privacy ]
 
   def home
   end
@@ -19,5 +19,8 @@ class PagesController < ApplicationController
       attachment: params.dig(:contact, :attachment),
     ).contact.deliver_now
     raise
+  end
+
+  def privacy
   end
 end

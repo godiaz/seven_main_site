@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users, path_names: { sign_in: 'login' }
+  get :contact, to: 'pages#privacy', as: :privacy
   get :contact, to: 'pages#contact'
   post :contact, to: 'pages#mail_contact'
   get :services, to: 'pages#services'

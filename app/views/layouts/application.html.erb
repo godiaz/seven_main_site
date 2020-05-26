@@ -1,20 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SevenMainSite</title>
+    <title>Seven Consulting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Building Simulation, Energy and Sustainability">
+
+    <!-- Facebook Open Graph data -->
+    <meta property="og:title" content="Seven Consulting" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%= request.original_url %>" />
+    <meta property="og:image" content="seven-cover.png" />
+    <meta property="og:description" content="Building Simulation, Energy and Sustainability" />
+    <meta property="og:site_name" content="www.7consulting.com" />
+
+    <!-- Twitter Card data -->
+<!--     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="www.7consulting.com">
+    <meta name="twitter:title" content="Seven Consulting">
+    <meta name="twitter:description" content="Building Simulation, Energy and Sustainability">
+    <meta name="twitter:creator" content="nev">
+    <meta name="twitter:image:src" content="seven-cover.png"> -->
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <script src="https://kit.fontawesome.com/ea437f64d7.js" crossorigin="anonymous"></script>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= favicon_link_tag 'favicon.ico' %>
+    <%= javascript_pack_tag 'application', defer: true %>
+    <%= yield :head %>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
-
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-
-    <%= yield %>
+    <div class="min-height">
+      <%= yield %>
+    </div>
+    <%= render 'shared/footer' %>
   </body>
 </html>

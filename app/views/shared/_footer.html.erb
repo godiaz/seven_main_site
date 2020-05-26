@@ -1,0 +1,36 @@
+<div class="footer">
+  <div class="container">
+    <%= image_tag 'seven.svg', class: 'seven-logo' %>
+    <div class="footer-info-container">
+      <div class="footer-info mb-4">
+        <div class="footer-info-address mr-5">
+          <p class="bold footer-title">MANCHESTER</p>
+          <p class="m-0">Seven Consulting</p>
+          <p class="m-0">Peter House,</p>
+          <p class="m-0">Oxford Street,</p>
+          <p class="m-0">Manchester,</p>
+          <p class="m-0">M1 5AN</p>
+        </div>
+        <div class="footer-info-links">
+          <p class="bold footer-title">USEFUL LINKS</p>
+          <%= link_to 'Privacy Policy', privacy_path, class: 'footer-link' %>
+          <%= link_to 'Contact', contact_path, class: 'footer-link' %>
+        </div>
+      </div>
+      <div class="footer-contact">
+        <p class="m-0">Tel +44(0)161 209 3259</p>
+        <p class="m-0">Email: hello@sevenacademy.co.uk</p>
+      </div>
+    </div>
+    <% if current_user&.admin %>
+      <ul>
+        <li class="nav-item flex-center">
+          <%= link_to "ADMIN", admin_courses_path, class: "nav-link white-imp flex-lm" %>
+        </li>
+        <li class="nav-item flex-center">
+          <%= link_to "STATS", admin_blazer_path, class: "nav-link white-imp flex-lm" %>
+        </li>
+      </ul>
+    <% end %>
+  </div>
+</div>

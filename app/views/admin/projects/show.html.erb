@@ -1,6 +1,9 @@
 <h2><%= @project.name %></h2>
 
 <%= simple_format @project.content %>
+<% @project.services.each do |service| %>
+  <%= service.title %>
+<% end %>
 
 <%= link_to @project.published ? 'Unpublish' : 'Publish' , publish_admin_project_path(@project), method: :patch %>
 

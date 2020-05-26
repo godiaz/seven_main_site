@@ -24,7 +24,7 @@ require("channels")
 
 // External imports
 import "bootstrap";
-
+import $ from "jquery"
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
@@ -35,3 +35,12 @@ document.addEventListener('turbolinks:load', () => {
 
 require("trix")
 require("@rails/actiontext")
+
+
+$(document).ready(function(){
+  if (".category-choice") {
+    $(".category-choice").click(function(){
+      $(this).toggleClass("active");
+    });
+  }
+});

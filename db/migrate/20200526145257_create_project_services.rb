@@ -1,0 +1,10 @@
+class CreateProjectServices < ActiveRecord::Migration[6.0]
+  def change
+    create_table :project_services do |t|
+      t.references :service, null: false, foreign_key: true
+      t.references :project, null: false, foreign_key: true
+
+      t.timestamps
+    end
+  end
+end

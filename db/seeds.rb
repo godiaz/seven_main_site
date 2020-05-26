@@ -5,4 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-admin = User.create!(admin: true, email: "leonardpercival@gmail.coom", password: "123123")
+
+services = ["Part L - SAP & SBEM", "Energy Statements", "Thermal Comfort & Overheating", "Daylight", "BREEAM - WELL", "Water Efficiency"]
+services.each {|r| Service.create!(title: r)}

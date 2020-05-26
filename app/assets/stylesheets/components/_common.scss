@@ -1,5 +1,5 @@
 body {
-  background-color: #fff;
+  background-color: #f6f6f6;
 }
 
 .roboto {
@@ -94,7 +94,7 @@ body {
 
 // Colors
 .grey {
-  color: #404040;
+  color: #404040 !important;
 }
 .light-grey {
   color: #8E8E8E;
@@ -119,6 +119,10 @@ body {
 }
 
 // Spacing
+
+.letter-spaced {
+  letter-spacing: 2px
+}
 
 .no-padding {
   padding: 0 !important;

@@ -15,14 +15,20 @@
 
 }
 .project-card {
-  width: 33.333vw;
+  width: 100vw;
   height: 260px;
   flex-shrink: 0;
+  @media only screen and (min-width: 700px) {
+    width: 50vw;
+  }
+  @media only screen and (min-width: 960px) {
+    width: 33.333vw;
+  }
 }
-.pos-one {
+.project-1 {
   z-index: 1;
 }
-.pos-two {
+.project-2 {
   z-index: 0;
 }
 

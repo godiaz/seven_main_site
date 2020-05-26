@@ -1,3 +1,48 @@
+.project-carousel-holder {
+  width: 100vw;
+  overflow: hidden;
+  height: 260px;
+  display: flex;
+  position: relative;
+}
+.project-carousel {
+  display: flex;
+  width: 100%;
+  height: 260px;
+  transition: 0.5s;
+  position: absolute;
+  left: 0;
+
+}
+.project-card {
+  width: 100vw;
+  height: 260px;
+  flex-shrink: 0;
+  @media only screen and (min-width: 700px) {
+    width: 50vw;
+  }
+  @media only screen and (min-width: 960px) {
+    width: 33.333vw;
+  }
+}
+.project-1 {
+  z-index: 1;
+}
+.project-2 {
+  z-index: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .services-container-home {
   display: grid;
   grid-template-columns: 1fr 1fr ;
@@ -8,7 +53,6 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
 }
-
 
 .partners-and-accreditations-container {
   display: flex;

@@ -49,6 +49,6 @@ class Admin::ProjectsController < ApplicationController
   end
 
   def project_params
-    params.require(:project).permit(:name, :location, :client, :architect, :content, :banner, :photos, service_ids: [])
+    params.require(:project).permit(:name, :location, :client, :architect, :sub_header, :contractor, :content, :banner, :photos, service_ids: [])
   end
 end

@@ -5,9 +5,11 @@
         <h1>New Project</h1>
         <%= simple_form_for [:admin, project] do |f| %>
           <%= f.input :name %>
+          <%= f.input :sub_header %>
           <%= f.input :location %>
           <%= f.input :client %>
           <%= f.input :architect %>
+          <%= f.input :contractor %>
           <%#= f.association :categories, as: :check_boxes %>
           <div class="form-group">
             <label class="control-label check_boxes optional">Services</label>
@@ -15,7 +17,7 @@
             <div class="category-choices">
               <% Service.all.each do |service| %>
                 <input type="checkbox" class="hidden" value="<%= service.id %>" name="project[service_ids][]" id="project_service_ids_<%= service.id %>" <%= "checked" if project.service_ids.include?(service.id) %>>
-                <label class="category-choice <%= "active" if project.service_ids.include?(service.id) %>" for="project_service_ids_<%= service.id %>" >
+                <label class="category-choice <%= "active" if project.service_ids.include?(service.id) %>" for="project_service_ids_<%= service.id %>" style="background-color: #<%= service.color %>">
                   <%= service.title %>
                   <i class="fa fa-check"></i>
                 </label>

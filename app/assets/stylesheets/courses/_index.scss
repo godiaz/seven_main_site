@@ -414,14 +414,13 @@ a:hover {
     display: none;
   }
   &:hover {
-    opacity: 1;
     cursor: pointer;
   }
   &.active {
-  color: white;
-  opacity: 1;
-  i {
-    display: block;
-  }
+    opacity: 1;
+    color: white;
+    i {
+      display: block;
+    }
   }
 }

@@ -1,68 +1,20 @@
-.top-banner {
-  background: linear-gradient(#387E87, #63B9BD);
+.seven-banner {
+  background-image: linear-gradient(#003c63, #08213F);
   display: flex;
-  justify-content: center;
   align-items: center;
-  min-height: 450px;
-  position: relative;
-  @include for-small-devices-down {
-    min-height: 350px;
-  }
-}
-h1 {
-  @include for-small-devices-down {
-    font-size: 2rem;
-  }
-}
-h5 {
-  @include for-small-devices-down {
-    font-size: 1rem;
-  }
-}
-.banner-text {
-  display: flex;
+  justify-content: center;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  min-height: 225px;
-  @include for-small-devices-down {
-    min-height: 175px;
-  }
-  // @include for-medium-devices-down {
-  //   width: 60%;
-  // }
-  // @include for-medium-devices-down {
-  //   width: 80%;
-  // }
-  h1 {
-    color: #FFF;
-    font-weight: lighter;
-  }
-  h2, h3 {
-    color: #FFF;
-    font-weight: lighter;
-  }
-  h5 {
-    font-weight: lighter;
-    color: #FFF;
-  }
+  color: #fff;
+  height: 560px;
+  width: 100vw;
 }
 
-.banner-button {
-  position: absolute;
-  bottom: 30px;
-  right: 50px;
+.banner-title {
+  font-family: "Roboto";
+  font-size: 36px;
 }
 
-.shallow {
-  min-height: 20px;
-  padding: 30px;
-  margin: 30px 0;
-}
-.pl-40 {
-  padding-left: 40px;
-}
-.pt-30 {
-  padding-top: 30px;
+.banner-details {
+  font-family: "Roboto";
+  font-size: 20px;
 }

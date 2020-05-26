@@ -1,32 +1,19 @@
-<div class="top-banner top" style="background-image: url(<%= asset_path('home.png') %>); background-size: cover; background-position: center;">
-  <div class="banner-text">
-    <h1 class="text-center white"><strong>Welcome to Seven Consulting</strong></h1>
-    <h5 class="text-center white fwnorm">Building Simulation, Energy and Sustainability</h5>
-  </div>
+<%= render "shared/banner", title: "Welcome to Seven Consulting", details: "Building Simulation, Energy and Sustainability" %>
+
+<h3 class="text-center xl-margin-top dark-blue">Our Services</h3>
+<p class="text-center grey">We offer a range of sustainability services, from energy statements to daylight assessments, using approved software and fully accredited consultants.</p>
+
+<div class="services-holder">
+  <div class="service-card"></div>
+  <div class="service-card"></div>
+  <div class="service-card"></div>
+  <div class="service-card"></div>
+  <div class="service-card"></div>
+  <div class="service-card"></div>
 </div>
-<h5 class="grey welcome-text">Seven Consulting is a dedicated Energy and Sustainability consultancy working with developers, contractors, architects and consultants at all stages of project delivery.</h5>
-<h3 class="text-center green">Our Services</h3>
-<h5 class="grey welcome-text">We offer a range of sustainability services, from energy statements to daylight assessments, using approved software and fully accredited consultants.</h5>
 
 
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class="testimonial">
-        <h3 class="text-center">TESTIMONIAL ONE</h3>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="testimonial">
-        <h3 class="text-center">TESTIMONIAL TWO</h3>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="testimonial">
-        <h3 class="text-center">TESTIMONIAL THREE</h3>
-      </div>
-    </div>
-  </div>
-</div>
+
+
 
 <%= render 'shared/partners_and_accreditations' %>

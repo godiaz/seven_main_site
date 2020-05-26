@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container pv-30">
   <div class="row">
     <div class="col-xs-12 col-sm-8 offset-sm-2">
       <div class="form-post">
@@ -14,8 +14,8 @@
             <input type="hidden" name="project[service_ids][]" value="">
             <div class="category-choices">
               <% Service.all.each do |service| %>
-                <input type="checkbox" class="hidden" value="<%= service.id %>" name="project[service_ids][]" id="project_service_ids_<%= service.id %>">
-                <label class="category-choice" for="project_service_ids_<%= service.id %>">
+                <input type="checkbox" class="hidden" value="<%= service.id %>" name="project[service_ids][]" id="project_service_ids_<%= service.id %>" <%= "checked" if project.service_ids.include?(service.id) %>>
+                <label class="category-choice <%= "active" if project.service_ids.include?(service.id) %>" for="project_service_ids_<%= service.id %>" >
                   <%= service.title %>
                   <i class="fa fa-check"></i>
                 </label>
@@ -26,7 +26,7 @@
           <%= f.input :photos, as: :file, input_html: { multiple: true } %>
           <!-- Inject categories here -->
           <%= f.input :content, placeholder: "In this tutorial..." %>
-          <%= f.submit "Save", class: "btn btn-primary"  %>
+          <%= f.submit class: "btn btn-primary"  %>
         <% end %>
       </div>
     </div>

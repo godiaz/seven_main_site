@@ -21,6 +21,10 @@ class PagesController < ApplicationController
     raise
   end
 
+  def services
+    @services = Service.all
+  end
+
   def privacy
   end
 end

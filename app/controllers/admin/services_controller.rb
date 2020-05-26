@@ -1,7 +1,6 @@
-class Admin::servicesController < ApplicationController
+class Admin::ServicesController < ApplicationController
   before_action :find_service, only: %i[show edit update destroy publish]
-  SERVICES = ["Part L - SAP & SBEM", "Energy Statements", "Thermal Comfort & Overheating", "Daylight", "BREEAM - WELL", "Water Efficiency"]
-  before_action :set_services, only: %i[new edit]
+
   def index
     @services = Service.all
   end
@@ -16,7 +15,7 @@ class Admin::servicesController < ApplicationController
   def create
     @service = Service.new(service_params)
     if @service.save
-      redirect_to admin_service_path(@service)
+      redirect_to admin_services_path
     else
       render :new
     end
@@ -45,7 +44,7 @@ class Admin::servicesController < ApplicationController
   end
 
   def service_params
-    params.require(:service).permit(:title, :content)
+    params.require(:service).permit(:title, :content, :photo, :color)
   end
 end
 

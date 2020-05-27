@@ -1,10 +1,46 @@
-<div class="seven-banner">
-  <h1 class="banner-title"><%= @project.name %></h1>
-  <h5 class="banner-details mt-4"><%= @project.sub_header %></h5>
+<div class="top-banner">
+  <div class="banner-text text-center">
+    <h1 class="banner-title"><strong><%= @project.name %></strong></h1>
+    <h5 class="banner-details"><%= @project.sub_header %></h5>
+  </div>
+</div>
+<div class="row noh">
+  <div class="col-sm-12 col-md-3">
+    <div class="mp">
+      <% @project.services.each do |service| %>
+        <div class="service-block" style="background-color: #<%= service.color %>;">
+          <% if service.photo.attached? %>
+            <%= image_tag url_for(service.photo), class: "service-svg-small sp", alt: "seven.svg" %>
+          <% else %>
+            <%= image_tag image_path("seven.svg"), class: "service-svg-small sp" %>
+          <% end %>
+          <h5><%= service.title %></h5>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-6 proj-content">
+    <div class="mp">
+      <%= simple_format @project.content %>
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-3">
+    <div class="mp">
+      <% @project.affiliates_hash.each do |affiliate, value| %>
+        <h5><%= affiliate.upcase %></h5>
+        <p><%= value %></p>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="project-image-holder">
+  <% @project.photos.each do |photo| %>
+    <%= image_tag url_for(photo), class: "proj-photo", alt: "alttext", onclick: "open_full_screen", id: "photo#{photo.id}" %>
+  <% end %>
 </div>
 
-
-<%= simple_format @project.content %>
-<% @project.services.each do |service| %>
-  <%= service.title %>
-<% end %>
+<script>
+  const open_full_screen = (event) => {
+    console.log(event.target)
+  }
+</script>

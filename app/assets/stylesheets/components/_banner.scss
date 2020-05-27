@@ -6,7 +6,7 @@
   flex-direction: column;
   color: #fff;
   height: 560px;
-  width: 100vw;
+  width: 100%;
 }
 
 .banner-title {
@@ -17,4 +17,55 @@
 .banner-details {
   font-family: "Roboto";
   font-size: 20px;
+}
+.top-banner {
+  background: linear-gradient(#387E87, #63B9BD);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 450px;
+  position: relative;
+  @include for-small-devices-down {
+    min-height: 350px;
+  }
+}
+
+.banner-text {
+  width: 50%;
+  @include for-medium-devices-down {
+    width: 60%;
+  }
+  @include for-medium-devices-down {
+    width: 80%;
+  }
+  h1 {
+    color: #FFF;
+    font-weight: lighter;
+  }
+  h2, h3 {
+    color: #FFF;
+    font-weight: lighter;
+  }
+  h5 {
+    font-weight: lighter;
+    color: #FFF;
+  }
+}
+
+.banner-button {
+  position: absolute;
+  bottom: 30px;
+  right: 50px;
+}
+
+.shallow {
+  min-height: 20px;
+  padding: 30px;
+  margin: 30px 0;
+}
+.pl-40 {
+  padding-left: 40px;
+}
+.pt-30 {
+  padding-top: 30px;
 }

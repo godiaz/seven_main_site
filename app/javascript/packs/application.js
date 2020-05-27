@@ -34,9 +34,11 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   const one = document.querySelector('.project-1')
   const two = document.querySelector('.project-2')
-  setInterval(
-    initCarousel(one, two)
-  , 5000);
+  if (one && two) {
+    setInterval(
+      initCarousel(one, two)
+    , 5000);
+  }
 });
 
 require("trix")

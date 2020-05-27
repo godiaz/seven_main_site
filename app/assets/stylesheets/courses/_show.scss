@@ -12,6 +12,10 @@
     margin: 0;
   }
 }
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+}
 .flex-btwn-top {
   display: flex;
   justify-content: space-between;
@@ -185,3 +189,59 @@
 #payment_quantity {
   width: 65px;
 }
+.noh {
+  margin: 0;
+}
+
+.thirty {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-block {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  h5 {
+    margin-bottom: 0px;
+    font-size: 1rem;
+    color: white;
+    padding-left: 10px;
+  }
+}
+.proj-content {
+  text-align: justify;
+}
+
+.service-svg-small {
+  height: 4rem;
+  width: 4rem;
+}
+
+.sp {
+  padding: 0.5rem;
+}
+.mp {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+.lp {
+  padding: 1.5rem;
+}
+.proj-photo {
+  width: 200px;
+  height: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+

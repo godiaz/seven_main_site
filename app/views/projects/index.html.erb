@@ -1,0 +1,8 @@
+<% @projects.each do |project| %>
+  <%= link_to project_path(project) do %>
+    <div class="">
+      <h3 class=""></h3>
+      <p><%= project.affiliates.first %><% project.affiliates[1..-1].each { |attribute, value| " | #{value}"} %></p>
+    </div>
+  <% end %>
+<% end %>

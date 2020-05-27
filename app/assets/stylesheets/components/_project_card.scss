@@ -13,16 +13,17 @@
     background-color: inherit;
     content: ' ';
   }
-  .project-categories {
-    position: absolute;
-    top: 16px;
-    left: 16px;
-    display: flex;
-  }
-  .project-details {
-    position: absolute;
-    bottom: 16px;
-    left: 16px;
-  }
 }
 
+.project-card-categories {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: flex;
+}
+
+.project-card-details {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+}

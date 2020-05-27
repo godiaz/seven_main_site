@@ -39,7 +39,7 @@ document.addEventListener('turbolinks:load', () => {
     function() {
       initCarousel(one, two)
     }
-  , 1000);
+  , 4000);
   }
 
 });

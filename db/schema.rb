@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_22_141134) do
+ActiveRecord::Schema.define(version: 2020_05_26_205437) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,15 @@ ActiveRecord::Schema.define(version: 2020_05_22_141134) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "project_services", force: :cascade do |t|
+    t.bigint "service_id", null: false
+    t.bigint "project_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["project_id"], name: "index_project_services_on_project_id"
+    t.index ["service_id"], name: "index_project_services_on_service_id"
+  end
+
   create_table "projects", force: :cascade do |t|
     t.string "name"
     t.string "location"
@@ -54,6 +63,15 @@ ActiveRecord::Schema.define(version: 2020_05_22_141134) do
     t.string "services"
     t.text "content"
     t.boolean "published", default: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "sub_header"
+    t.string "contractor"
+  end
+
+  create_table "services", force: :cascade do |t|
+    t.string "title"
+    t.string "color"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -72,4 +90,6 @@ ActiveRecord::Schema.define(version: 2020_05_22_141134) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "project_services", "projects"
+  add_foreign_key "project_services", "services"
 end

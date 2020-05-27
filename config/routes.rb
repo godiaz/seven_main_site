@@ -15,6 +15,7 @@ Rails.application.routes.draw do
           patch 'publish', to: 'projects#publish'
         end
       end
+      resources :services
     end
     authenticated do
       root to: 'projects#index'

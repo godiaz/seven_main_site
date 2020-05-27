@@ -1,7 +1,6 @@
 class Admin::ProjectsController < ApplicationController
   before_action :find_project, only: %i[show edit update destroy publish]
-  SERVICES = ["Part L - SAP & SBEM", "Energy Statements", "Thermal Comfort & Overheating", "Daylight", "BREEAM - WELL", "Water Efficiency"]
-  before_action :set_services, only: %i[new edit]
+
   def index
     @projects = Project.all
   end
@@ -45,15 +44,11 @@ class Admin::ProjectsController < ApplicationController
 
   private
 
-  def set_services
-    @services = SERVICES
-  end
-
   def find_project
     @project = Project.find(params[:id])
   end
 
   def project_params
-    params.require(:project).permit(:name, :location, :client, :architect, :services, :content, :banner, :photos)
+    params.require(:project).permit(:name, :location, :client, :architect, :sub_header, :contractor, :content, :banner, :photos, service_ids: [])
   end
 end

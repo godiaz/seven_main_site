@@ -1,1 +1,10 @@
+<div class="seven-banner">
+  <h1 class="banner-title"><%= @project.name %></h1>
+  <h5 class="banner-details mt-4"><%= @project.sub_header %></h5>
+</div>
 
+
+<%= simple_format @project.content %>
+<% @project.services.each do |service| %>
+  <%= service.title %>
+<% end %>

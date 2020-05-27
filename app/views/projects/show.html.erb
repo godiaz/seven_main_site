@@ -1,1 +1,40 @@
-<%= render "shared/project" %>
+<%= render "shared/banner", title: @project.name, details: @project.sub_header %>
+
+<div class="project-details">
+  <div class="project-facts">
+    <div class="project-fact">
+      <h6 class="m-0 grey">LOCATION</h6>
+      <p class="m-0 grey lighter"><%= @project.location %></p>
+    </div>
+    <div class="project-fact">
+      <h6 class="m-0 grey">CLIENT</h6>
+      <p class="m-0 grey lighter"><%= @project.client %></p>
+    </div>
+    <div class="project-fact">
+      <h6 class="m-0 grey">CONTRACTOR</h6>
+      <p class="m-0 grey lighter"><%= @project.contractor %></p>
+    </div>
+    <div class="project-fact">
+      <h6 class="m-0 grey">ARCHITECT</h6>
+      <p class="m-0 grey lighter"><%= @project.architect %></p>
+    </div>
+  </div>
+  <div class="project-description">
+    <p class="grey lighter"><%= @project.content %></p>
+  </div>
+  <div class="flex-break"></div>
+  <div class="project-services">
+    <% @project.services.each do |service| %>
+      <div class="project-service" style="background-color: #<%= service.color %>">
+        <%= image_tag "p&a-one.png", alt: "alttext" %>
+        <p class="white lighter m-0 ml-4"><%= service.title %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="project-photos">
+  <% @project.photos.attachments.each do |photo| %>
+    <%= render "shared/project_photo", photo: photo %>
+  <% end %>
+</div>

@@ -3,6 +3,16 @@ if Rails.env.development?
 end
 
 services = {
+  "Energy Statements" => {
+    color: "2DB5B9",
+    content: "Energy statements are required by ‘Major schemes’ to support the planning application. They normally form a part of the Sustainability statement.
+
+Local Authorities vary in their requirements and targets with respect to energy. The most onerous being the London Plan, although some boroughs go further still.
+
+We review your proposals and the local authority policy to determine the principal targets. We integrate easily into your current design team to coordinate a compliant, cost effective solution that best fits your project.
+
+We carry out all the calculations (SAP, SBEM, Overheating) and feasibility studies (LZC technology, proximity to district heat networks etc) required to support the statement."
+  },
   "Part L - SAP & SBEM" => {
     color: "EF8BAB",
     content: "The Building regulations Part L is concerned with the conservation of fuel and power. It is split into approved documents L1A (New Dwellings) and L2A (New buildings other than dwellings).
@@ -16,16 +26,6 @@ Building control are required to see a ‘design stage’ calculation. Without t
 When the building is complete, building control are required to see an ‘as built’ SAP calculation and an Energy Performance Certificate (EPC), to enable Final Building Control Approval.
 
 We engage with clients from RIBA stage 2 through to completion and work along side your existing design team to craft a compliant, cost effective solution that best fits your project aspirations.",
-  },
-  "Energy Statements" => {
-    color: "2DB5B9",
-    content: "Energy statements are required by ‘Major schemes’ to support the planning application. They normally form a part of the Sustainability statement.
-
-Local Authorities vary in their requirements and targets with respect to energy. The most onerous being the London Plan, although some boroughs go further still.
-
-We review your proposals and the local authority policy to determine the principal targets. We integrate easily into your current design team to coordinate a compliant, cost effective solution that best fits your project.
-
-We carry out all the calculations (SAP, SBEM, Overheating) and feasibility studies (LZC technology, proximity to district heat networks etc) required to support the statement."
   },
   "Thermal Comfort & Overheating" => {
     color: "D95415",
@@ -59,7 +59,15 @@ services.keys.each do |r|
   Service.create!(title: r, color: services[r][:color], content: services[r][:content])
 end
 
-
+# Project.create(
+#   name: 'Twickenham Gateway',
+#   subheader: 'Twickenham Gateway is the transformational redevelopment of Twickenham Station. A brand new station building in the centre of a public plaza hosting a convenience store, cafe and shops at ground level with new apartments above.',
+#   location: 'Twickenham',
+#   client: 'Solum',
+#   architect: "Rolf Judd",
+#   contractor: 'Osborne',
+#   services:
+# )
 
 
 

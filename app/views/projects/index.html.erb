@@ -1,8 +1,11 @@
-<% @projects.each do |project| %>
-  <%= link_to project_path(project) do %>
-    <div class="">
-      <h3 class=""></h3>
-      <p><%= project.affiliates.first %><% project.affiliates[1..-1].each { |attribute, value| " | #{value}"} %></p>
-    </div>
+<%= render "shared/banner", title: "Projects", details: "We are an established, innovative energy and sustainability consultancy that provide a full suite of modelling and compliance solutions across all sectors of the property and construction industry." %>
+
+<div class="projects-grid">
+  <% @projects.each do |project| %>
+    <%= link_to project_path(project) do  %>
+      <%= render "shared/project_card", project: project %>
+    <% end %>
   <% end %>
-<% end %>
+</div>
+
+<%= render 'shared/partners_and_accreditations' %>

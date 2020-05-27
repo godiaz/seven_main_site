@@ -34,13 +34,19 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   const one = document.querySelector('.project-1')
   const two = document.querySelector('.project-2')
-  setInterval(
-    initCarousel(one, two)
-  , 5000);
+  if (one) {
+    setInterval(
+    function() {
+      initCarousel(one, two)
+    }
+  , 1000);
+  }
+
 });
 
 require("trix")
 require("@rails/actiontext")
+
 $(document).ready(function(){
   if (".category-choice") {
     $(".category-choice").click(function(){

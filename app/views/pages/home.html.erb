@@ -73,13 +73,14 @@
 </div>
 <%= link_to "MORE ABOUT OUR SERVICES >>", services_path, class: "text-center roboto grey letter-spaced bold d-block mb-5" %>
 
-<div class="project-carousel-holder" id="project-carousel-holder">
-  <div class="project-carousel project-1" id="project-carousel">
-    <% @projects.each do |project| %>
-      <%= link_to "#{project.name}", project_path(project), class: "project-card", style: "background-image: url(#{url_for(project.banner)})" %>
-    <% end %>
-  </div>
-
-</div>
+<%= render "shared/lcar",
+  elements: @projects,
+  element_height: @element_height,
+  sm_count:  @sm_count,
+  md_count: @md_count,
+  lg_count: @lg_count,
+  xl_count: @xl_count,
+  ms_per_scroll: @ms_per_scroll
+%>
 
 <%= render 'shared/partners_and_accreditations' %>

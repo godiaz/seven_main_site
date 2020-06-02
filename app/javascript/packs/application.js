@@ -61,8 +61,8 @@ $(document).ready(function(){
 });
 
 if (document.getElementById('lcar')) {
-
   window.onresize = updateLcar;
   window.onload = updateLcar
   scrollio()
 }
+

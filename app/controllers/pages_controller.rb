@@ -3,6 +3,12 @@ class PagesController < ApplicationController
 
   def home
     @projects = Project.where(published: true).first(6)
+    @element_height = "200px"
+    @sm_count = 1
+    @md_count = 3
+    @lg_count = 3
+    @xl_count = 3
+    @ms_per_scroll = 4000
   end
 
   def mail_contact

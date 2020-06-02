@@ -9,6 +9,19 @@
 // // Extra large devices (large desktops, 1200px and up)
 // @media (min-width: 1200px) { ... }
 .element {
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+  transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -webkit-transition: opacity .5s ease-in-out;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.element:hover {
+  opacity: 1;
 }
 .lcar {
   width: 100%;

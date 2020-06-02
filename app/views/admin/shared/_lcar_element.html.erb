@@ -1,8 +1,12 @@
 <% if link_path %>
   <%= link_to link_path,
     class: "element",
-    style: "height: #{height}; width: #{(1 / sm_count) * 100}%; background-color: #{background_color};background-image: url(#{url_for(element.banner)})" do %>
-    <h1><%= element.name %></h1>
+    style: "height: #{height};
+    width: #{(1 / sm_count) * 100}%;
+    background-color: #{background_color};
+    background-image: url(#{url_for(element.banner)})" do %>
+    <h4><%= element.name %></h4>
+    <h6><%= element.services_sentence %></h6>
   <% end %>
 <% else %>
   <div
@@ -12,7 +16,8 @@
       width: <%= (1 / sm_count) * 100 %>%;
       background-color: <%= background_color %>;
     ">
-    <h1><%= element.name %></h1>
+    <h4><%= element.name %></h4>
+    <h6><%= element.services_sentence %></h6>
   </div>
 <% end %>
 

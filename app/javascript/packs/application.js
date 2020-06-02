@@ -28,16 +28,17 @@ import $ from "jquery"
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { initCarousel } from './carousel'
-
+import { scrollio, updateLcar } from './lcar'
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-  const one = document.querySelector('.project-1')
-  const two = document.querySelector('.project-2')
-
-  document.getElementById('project-carousel-holder').addEventListener('scroll', (e) => {
-    console.log(e.target.offetWidth)
-  })
+  // const one = document.querySelector('.project-1')
+  // const two = document.querySelector('.project-2')
+  // if (document.getElementById('project-carousel-holder')) {
+  //   document.getElementById('project-carousel-holder').addEventListener('scroll', (e) => {
+  //     console.log(e.target.offetWidth)
+  //   })
+  // }
 
   // if (one) {
   //   setInterval(
@@ -59,4 +60,9 @@ $(document).ready(function(){
   }
 });
 
+if (document.getElementById('lcar')) {
 
+  window.onresize = updateLcar;
+  window.onload = updateLcar
+  scrollio()
+}

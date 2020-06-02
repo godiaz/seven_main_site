@@ -7,7 +7,7 @@ class Admin::ProjectsController < ApplicationController
     @sm_count = 1
     @md_count = 3
     @lg_count = 3
-    @xl_count = 6
+    @xl_count = 3
     @ms_per_scroll = 4000
   end
 

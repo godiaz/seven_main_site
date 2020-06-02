@@ -11,4 +11,9 @@ class Project < ApplicationRecord
   def affiliates_hash
     { location: location, client: client, architect: architect, contractor: contractor}
   end
+
+  def services_sentence
+    names = services.map {|s| s.title}
+    names.join(" | ")
+  end
 end

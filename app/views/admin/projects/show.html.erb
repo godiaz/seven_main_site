@@ -1,2 +1,11 @@
 <%= render "shared/project" %>
 <%= link_to @project.published ? 'Unpublish' : 'Publish' , publish_admin_project_path(@project), method: :patch %>
+<%= render "shared/lcar",
+  elements: @projects,
+  element_height: @element_height,
+  sm_count:  @sm_count,
+  md_count: @md_count,
+  lg_count: @lg_count,
+  xl_count: @xl_count,
+  ms_per_scroll: @ms_per_scroll
+%>

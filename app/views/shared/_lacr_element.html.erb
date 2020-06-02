@@ -1,0 +1,24 @@
+<% if link_path %>
+  <%= link_to link_path,
+    class: "element",
+    style: "
+      height: #{height};
+      width: #{(1 / sm_count) * 100}%;
+      background-color: #{background_color};
+    " do  %>
+    <h4><%= element.title %></h4>
+    <h6><%= element.services_sentence %></h6>
+  <% end %>
+<% else %>
+  <div
+    class="element"
+    style="
+      height: <%= height %>;
+      width: <%= (1 / sm_count) * 100 %>%;
+      background-color: <%= background_color %>;
+    ">
+    <h4><%= element.title %></h4>
+    <h6><%= element.services_sentence %></h6>
+  </div>
+<% end %>
+

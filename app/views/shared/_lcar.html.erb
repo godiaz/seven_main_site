@@ -1,0 +1,11 @@
+<div id='lcar' class="lcar" data-sm='<%= sm_count %>' data-md='<%= md_count %>' data-lg='<%= lg_count %>' data-xl='<%= xl_count %>' data-scroll='<%= ms_per_scroll %>' >
+  <% elements.each do |element| %>
+    <%= render "admin/shared/lcar_element",
+      element: element,
+      height: element_height,
+      sm_count: sm_count,
+      background_color: "#" + element.services.first.color,
+      link_path: project_path(element) || nil
+    %>
+  <% end %>
+</div>

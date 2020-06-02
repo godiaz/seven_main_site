@@ -25,7 +25,7 @@ const initCarousel = (one, two) => {
        two.style.left = '0'
      } else {
        movement(two)
-       if(twoCounter == two.children.length - 3) {
+       if(twoCounter == two.children.length - 2) {
          one.style.display = 'flex'
          one.style.zIndex = 0
          oneDontMove = true
@@ -39,7 +39,7 @@ const initCarousel = (one, two) => {
      initialMovement(one)
    } else {
      movement(one)
-     if(oneCounter == one.children.length - 3) {
+     if(oneCounter == one.children.length - 2) {
        two.style.display = 'flex'
        two.style.zIndex = 0
        twoDontMove = true

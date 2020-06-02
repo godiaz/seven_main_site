@@ -13,20 +13,25 @@
   font-family: "Roboto";
   font-size: 40px;
 }
+​path {
+    fill: white;
+}​
 
 .banner-details {
   font-family: "Roboto";
   font-size: 20px;
   text-align: center;
-  max-width: 50%;
 }
 .top-banner {
-  background: linear-gradient(#387E87, #63B9BD);
+  // background: linear-gradient(#387E87, #63B9BD);
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 450px;
   position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   @include for-small-devices-down {
     min-height: 350px;
   }

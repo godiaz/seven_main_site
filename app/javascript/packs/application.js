@@ -35,13 +35,17 @@ document.addEventListener('turbolinks:load', () => {
   const one = document.querySelector('.project-1')
   const two = document.querySelector('.project-2')
 
-  if (one) {
-    setInterval(
-    function() {
-      initCarousel(one, two)
-    }
-  , 4000);
-  }
+  document.getElementById('project-carousel-holder').addEventListener('scroll', (e) => {
+    console.log(e.target.offetWidth)
+  })
+
+  // if (one) {
+  //   setInterval(
+  //   function() {
+  //     console.log(one.scrollWidth)
+  //   }
+  // , 4000);
+  // }
 });
 
 require("trix")
@@ -54,3 +58,5 @@ $(document).ready(function(){
     });
   }
 });
+
+

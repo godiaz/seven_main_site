@@ -1,0 +1,18 @@
+<% if link_path %>
+  <%= link_to link_path,
+    class: "element",
+    style: "height: #{height}; min-width: #{(1 / sm_count) * 100}%; background-color: #{background_color};background-image: url(#{url_for(element.banner)})" do %>
+    <h1><%= element.name %></h1>
+  <% end %>
+<% else %>
+  <div
+    class="element"
+    style="
+      height: <%= height %>;
+      min-width: <%= (1 / sm_count) * 100 %>%;
+      background-color: <%= background_color %>;
+    ">
+    <h1><%= element.name %></h1>
+  </div>
+<% end %>
+

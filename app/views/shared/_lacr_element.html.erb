@@ -1,0 +1,22 @@
+<% if link_path %>
+  <%= link_to link_path,
+    class: "element",
+    style: "
+      height: #{height};
+      width: #{(1 / sm_count) * 100}%;
+      background-color: #{background_color};
+    " do  %>
+    <h1><%= element.title %></h1>
+  <% end %>
+<% else %>
+  <div
+    class="element"
+    style="
+      height: <%= height %>;
+      width: <%= (1 / sm_count) * 100 %>%;
+      background-color: <%= background_color %>;
+    ">
+    <h1><%= element.title %></h1>
+  </div>
+<% end %>
+

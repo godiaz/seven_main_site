@@ -1,7 +1,7 @@
-<div class="top-banner">
+<div class="top-banner" style="background-image: url(<%= url_for(@project.banner) %>);">
   <div class="banner-text text-center">
     <h1 class="banner-title"><strong><%= @project.name %></strong></h1>
-    <h5 class="banner-details"><%= @project.sub_header %></h5>
+    <h5 class="banner-details text-center"><%= @project.sub_header %></h5>
   </div>
 </div>
 <div class="row noh">
@@ -33,14 +33,10 @@
     </div>
   </div>
 </div>
-<div class="project-image-holder">
-  <% @project.photos.each do |photo| %>
-    <%= image_tag url_for(photo), class: "proj-photo", alt: "alttext", onclick: "open_full_screen", id: "photo#{photo.id}" %>
+
+<div class="project-photos">
+  <% @project.photos.attachments.each do |photo| %>
+    <%= render "shared/project_photo", photo: photo %>
   <% end %>
 </div>
 
-<script>
-  const open_full_screen = (event) => {
-    console.log(event.target)
-  }
-</script>

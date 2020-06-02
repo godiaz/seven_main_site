@@ -3,15 +3,11 @@
   position: relative;
   color: #fff;
   cursor: pointer;
-  transition: background-color 0.5s ease-in-out;
+  opacity: 0.5;
+  background-size: cover;
+  transition: opacity 0.5s ease-in-out;
   &:hover {
-    background-color: rgba(0,0,20,.5) !important;
-  }
-  &:before {
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    background-color: inherit;
-    content: ' ';
+    opacity: 1;
   }
 }
 

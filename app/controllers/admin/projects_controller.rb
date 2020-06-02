@@ -3,6 +3,12 @@ class Admin::ProjectsController < ApplicationController
 
   def index
     @projects = Project.all
+    @element_height = "200px"
+    @sm_count = 1
+    @md_count = 3
+    @lg_count = 3
+    @xl_count = 6
+    @ms_per_scroll = 4000
   end
 
   def show

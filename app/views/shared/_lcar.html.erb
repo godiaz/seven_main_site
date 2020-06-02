@@ -1,0 +1,11 @@
+<div class="lcar">
+  <% elements.each do |element| %>
+    <%= render "admin/shared/lcar_element",
+      element: element,
+      height: element_height,
+      sm_count: sm_count,
+      background_color: "#" + element.services.first.color,
+      link_path: project_path(element) || nil
+    %>
+  <% end %>
+</div>

@@ -1,18 +1,24 @@
-<div class="p-30">
-  <%= link_to new_admin_project_path do %>
-    <div class="btn btn-primary">New Project</div>
-  <% end %>
-  <% @projects.each do |project| %>
-    <div>
-      <p>
-        <%= project.name %>
-        <%= link_to 'Edit',  edit_admin_project_path(project)%>
-        <%= link_to 'Delete',  admin_project_path(project), method: :delete %>
-      </p>
-    </div>
-  <% end %>
+<%#= render "shared/lcar",
+  elements: @projects,
+  element_height: @element_height,
+  sm_count:  @sm_count,
+  md_count: @md_count,
+  lg_count: @lg_count,
+  xl_count: @xl_count,
+  ms_per_scroll: @ms_per_scroll
+%>
+
+
+<div class="your-class">
+  <div>your content</div>
+  <div>your content</div>
+  <div>your content</div>
 </div>
 
-
-
-
+<script>
+  $(document).ready(function(){
+    $('.your-class').slick({
+      setting-name: setting-value
+    });
+  });
+</script>

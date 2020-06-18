@@ -1,19 +1,21 @@
 <div class="container override-container">
-  <div class="row noh">
+  <div class="row noh pt20">
     <% @services.each do |service| %>
-      <div class="col-sm-12 col-md-6 service" style="background-color: #<%= service.color %>;">
-        <% if service.photo.attached? %>
-          <%= image_tag url_for(service.photo), class: "service-svg" %>
-        <% end %>
-        <h2>
-          <%= service.title %>
-          <% if admin %>
-            <%= link_to edit_admin_service_path(service) do %>
-              <i class="fas fa-edit" style="color: white;"></i>
-            <% end %>
+      <div class="col-sm-12 col-md-6 p20" >
+        <div class="service" style="background-color: #<%= service.color %>;">
+          <% if service.photo.attached? %>
+            <%= image_tag url_for(service.photo), class: "service-svg" %>
           <% end %>
-        </h2>
-        <%= service.content %>
+          <h2>
+            <%= service.title %>
+            <% if admin %>
+              <%= link_to edit_admin_service_path(service) do %>
+                <i class="fas fa-edit" style="color: white;"></i>
+              <% end %>
+            <% end %>
+          </h2>
+          <%= service.content %>
+        </div>
       </div>
     <% end %>
   </div>

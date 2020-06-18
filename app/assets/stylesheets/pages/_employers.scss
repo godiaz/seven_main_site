@@ -11,6 +11,8 @@
   flex-wrap: wrap;
 }
 .service {
+  width: 100%;
+  height: 100%;
   color: white;
   padding: 40px 40px;
   h2 {
@@ -20,4 +22,10 @@
 .service-svg {
   height: 5vh;
   margin-bottom: 30px;
+}
+.p20 {
+  padding: 10px;
+}
+.pt20 {
+  padding-top: 10px;
 }

@@ -1,12 +1,13 @@
-<div class="top-banner" style="background-image: url(<%= url_for(@project.banner) %>);">
+<div class="top-banner" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)), url(<%= url_for(@project.banner) %>);">
   <div class="banner-text text-center">
     <h1 class="banner-title"><strong><%= @project.name %></strong></h1>
     <h5 class="banner-details text-center"><%= @project.sub_header %></h5>
   </div>
 </div>
-<% if current_user&.admin %>
+<% if admin %>
   <div style="padding: 10px;">
     <%= link_to @project.published ? 'Unpublish' : 'Publish' , publish_admin_project_path(@project), method: :patch, class: "btn #{@project.published ? 'btn-danger' : 'btn-primary'}" %>
+    <%= link_to "Edit", edit_admin_project_path(@project), class: "btn btn-primary" %>
   </div>
 <% end %>
 <div class="row noh">

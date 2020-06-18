@@ -31,7 +31,9 @@
   z-index: 0;
 }
 
-
+.min-height {
+  min-height: calc(100vh - 430px);
+}
 
 
 

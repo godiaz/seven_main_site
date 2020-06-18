@@ -1,5 +1,4 @@
 <%= render "shared/project" %>
-<%= link_to @project.published ? 'Unpublish' : 'Publish' , publish_admin_project_path(@project), method: :patch %>
 <%= render "shared/lcar",
   elements: @projects,
   element_height: @element_height,

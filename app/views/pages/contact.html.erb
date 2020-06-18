@@ -1,12 +1,24 @@
-<div class="container">
-  <%= simple_form_for :contact, url: contact_path, method: :post do |f| %>
-    <%= f.input :name, required: false %>
-    <%= f.input :email, required: false %>
-    <%= f.input :phone, required: false %>
-    <%= f.input :location, required: false %>
-    <%= f.input :message, as: :text, required: false, input_html: { rows: 10 } %>
-    <%= f.input :attachment, as: :file, required: false %>
-    <%= f.submit, 'Submit' %>
-  <% end %>
+<div class="devise-wrapper">
+  <div class="top-banner">
+    <div class="banner-text">
+      <h1 class="text-center">WE'D LOVE TO HEAR FROM YOU</h1>
+      <h5 class="text-center">Whether you need help with the site, have a question about a course, have a suggestion for a future course or want to discuss how we can tailor a CPD solution for your company, don’t hesitate to get in touch.<br><br>Please use the form below and we’ll get back to you as soon as we can.<br><br>Thanks</h5>
+    </div>
+  </div>
+  <div class="devise-form">
+    <h2 class="text-center mb-5">How can we help?</h2>
+    <%= simple_form_for :contact, url: contact_path, method: :post, html: { class: "contact-form" } do |f| %>
+      <div class="form-inputs">
+        <%= f.input :name, required: false, input_html: { class: "devise-input" }, placeholder: "John Doe", label: false %>
+        <%= f.input :email, required: false, input_html: { class: "devise-input" }, placeholder: "john@example.com", label: false %>
+      </div>
+      <div class="form-inputs">
+        <%= f.input :phone, required: false, input_html: { class: "devise-input" }, placeholder: "07785 673 357", label: false %>
+        <%= f.input :location, required: false, input_html: { class: "devise-input" }, placeholder: "London", label: false %>
+      </div>
+      <%= f.input :message, as: :text, required: false, input_html: { class: "devise-input", rows: 10 }, label: false, placeholder: "Your message here...."  %>
+      <%= f.input :attachment, as: :file, required: false %>
+      <%= f.button :submit, "SEND", class: "seven-button devise-button mb-4" %>
+    <% end %>
+  </div>
 </div>
-  

@@ -4,6 +4,11 @@
     <h5 class="banner-details text-center"><%= @project.sub_header %></h5>
   </div>
 </div>
+<% if current_user&.admin %>
+  <div style="padding: 10px;">
+    <%= link_to @project.published ? 'Unpublish' : 'Publish' , publish_admin_project_path(@project), method: :patch, class: "btn #{@project.published ? 'btn-danger' : 'btn-primary'}" %>
+  </div>
+<% end %>
 <div class="row noh">
   <div class="col-sm-12 col-md-3">
     <div class="mp">
@@ -27,8 +32,10 @@
   <div class="col-sm-12 col-md-3">
     <div class="mp">
       <% @project.affiliates_hash.each do |affiliate, value| %>
-        <h5><%= affiliate.upcase %></h5>
-        <p><%= value %></p>
+        <% if value.present? %>
+          <h5><%= affiliate.upcase %></h5>
+          <p><%= value %></p>
+        <% end %>
       <% end %>
     </div>
   </div>

@@ -1,6 +1,8 @@
-<div class="project-card" style="background: linear-gradient(rgba(0,0,20,0.1), rgba(0,0,20,0.3)), url('https://images.pexels.com/photos/3662585/pexels-photo-3662585.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center center / cover">
+<div class="project-card" style="background: linear-gradient(rgba(0,0,20,0.1), rgba(0,0,20,0.3)), url(<%= url_for(project.banner) %>) no-repeat center center / cover">
   <div class="project-card-categories">
-    <p>icons go here</p>
+    <% project.services.each do |service| %>
+      <%= image_tag service.photo, alt: "alttext" %>
+    <% end %>
   </div>
   <div class="project-card-details">
     <h5 class="project-card-title"><%= project.name %></h5>

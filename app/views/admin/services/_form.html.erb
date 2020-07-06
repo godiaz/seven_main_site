@@ -1,16 +1,7 @@
-<div class="container pv-30">
-  <div class="row">
-    <div class="col-xs-12 col-sm-8 offset-sm-2">
-      <div class="form-post">
-        <h1>New Service</h1>
-        <%= simple_form_for [:admin, service] do |f| %>
-          <%= f.input :title, placeholder: "Cummon Nev, you must be able to think of a good title..." %>
-          <%= f.input :color, placeholder: "Use any HEX color code, without the #, i.e. F2F2F2" %>
-          <%= f.input :photo, as: :file %>
-          <%= f.text_area :content, placeholder: "This service offers the following things...", class: "high-input" %>
-          <%= f.submit class: "btn btn-primary"  %>
-        <% end %>
-      </div>
-    </div>
-  </div>
-</div>
+<%= simple_form_for [:admin, service] do |f| %>
+  <%= f.input :title, placeholder: "Cummon Nev, you must be able to think of a good title..." %>
+  <%= f.input :color, placeholder: "Use any HEX color code, without the #, i.e. F2F2F2" %>
+  <%= f.input :photo, as: :file %>
+  <%= f.text_area :content, placeholder: "This service offers the following things...", class: "high-input" %>
+  <%= f.submit class: "btn btn-primary"  %>
+<% end %>

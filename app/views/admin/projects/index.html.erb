@@ -1,3 +1,6 @@
+<%= link_to "New Project", new_admin_project_path, class: 'btn btn-danger mt5' %>
+<%= link_to "Services", admin_services_path, class: 'btn btn-primary mt5' %>
+
 <div class="projects-grid mt5">
   <% @projects.each do |project| %>
     <%= link_to admin_project_path(project), class: "project-card-link" do  %>

@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home, :mail_contact, :privacy, :services ]
+  skip_before_action :authenticate_user!, only: [ :home, :mail_contact, :privacy, :services, :contact ]
 
   def home
     @projects = Project.where(published: true).first(6)

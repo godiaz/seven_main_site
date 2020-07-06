@@ -29,6 +29,7 @@ gem 'redis', '~> 4.0'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'devise'
+gem 'aws-sdk-s3', '~>1', require: false
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'

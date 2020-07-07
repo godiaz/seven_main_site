@@ -3,6 +3,7 @@ class Project < ApplicationRecord
   has_many_attached :photos
   has_many :project_services, dependent: :destroy
   has_many :services, through: :project_services
+  validates :banner, attached: true
 
   def affiliates
     [location, client, architect, contractor]

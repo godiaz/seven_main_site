@@ -1,4 +1,4 @@
-<div class="project-photo" data-toggle="modal" data-target="#modal<%= photo.id %>" style="background-image: url(<%= asset_path 'home.png' %>)"></div>
+<div class="project-photo" data-toggle="modal" data-target="#modal<%= photo.id %>" style="background-image: url(<%= url_for photo %>)"></div>
 <!-- Modal -->
 <div class="modal fade " id="modal<%= photo.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog photo-modal" role="document">

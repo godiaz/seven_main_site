@@ -26,7 +26,7 @@ class Admin::ServicesController < ApplicationController
 
   def update
     if @service.update(service_params)
-      redirect_to admin_service_path(@service)
+      redirect_to admin_services_path()
     else
       render :edit
     end

@@ -58,7 +58,7 @@ class Admin::ProjectsController < ApplicationController
   private
 
   def find_project
-    @project = Project.find(params[:id])
+    @project = Project.friednly.find(params[:id])
   end
 
   def project_params

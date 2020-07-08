@@ -4,6 +4,8 @@ class Project < ApplicationRecord
   has_many :project_services, dependent: :destroy
   has_many :services, through: :project_services
   validates :banner, attached: true
+  extend FriendlyId
+  friendly_id :name, use: :slugged
 
   def affiliates
     [location, client, architect, contractor]

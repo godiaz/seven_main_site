@@ -2,7 +2,7 @@
   <div class="row noh pt20">
     <% @services.each do |service| %>
       <div class="col-sm-12 col-md-6 p20" >
-        <div class="service" style="background-color: #<%= service.color %>;">
+        <div class="service" style="background-color: #<%= service.color %>;" id="<%= service.title.downcase[0..2] %>">
           <% if service.photo.attached? %>
             <%= image_tag url_for(service.photo), class: "service-svg" %>
           <% end %>

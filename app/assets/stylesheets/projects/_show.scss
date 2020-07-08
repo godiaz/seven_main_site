@@ -65,7 +65,9 @@
     width: 25%;
   }
 }
-
+html {
+  scroll-behaviour: smooth;
+}
 .project-service {
   display: flex;
   align-items: center;

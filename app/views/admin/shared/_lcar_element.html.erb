@@ -5,6 +5,11 @@
     width: #{(1 / sm_count) * 100}%;
     background-color: #{background_color};
     background-image: url(#{url_for(element.banner)})" do %>
+    <div class="project-card-categories">
+      <% element.services.each do |service| %>
+        <%= image_tag service.photo, alt: "alttext", class: "service-svg-vsmall" %>
+      <% end %>
+    </div>
     <h4><%= element.name %></h4>
     <h6><%= element.services_sentence %></h6>
   <% end %>
@@ -16,6 +21,11 @@
       width: <%= (1 / sm_count) * 100 %>%;
       background-color: <%= background_color %>;
     ">
+    <div class="project-card-categories">
+      <% element.services.each do |service| %>
+        <%= image_tag service.photo, alt: "alttext", class: "service-svg-vsmall" %>
+      <% end %>
+    </div>
     <h4><%= element.name %></h4>
     <h6><%= element.services_sentence %></h6>
   </div>

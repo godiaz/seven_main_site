@@ -13,6 +13,22 @@
 <div class="row noh">
   <div class="col-sm-12 col-md-3">
     <div class="mp">
+      <% @project.affiliates_hash.each do |affiliate, value| %>
+        <% if value.present? %>
+          <h5><%= affiliate.upcase %></h5>
+          <p><%= value %></p>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="col-sm-12 col-md-6 proj-content">
+    <div class="mp">
+      <%= simple_format @project.content %>
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-3">
+    <div class="mp">
       <% @project.services.each do |service| %>
         <div class="service-block" style="background-color: #<%= service.color %>;">
           <% if service.photo.attached? %>
@@ -22,21 +38,6 @@
           <% end %>
           <h5><%= service.title %></h5>
         </div>
-      <% end %>
-    </div>
-  </div>
-  <div class="col-sm-12 col-md-6 proj-content">
-    <div class="mp">
-      <%= simple_format @project.content %>
-    </div>
-  </div>
-  <div class="col-sm-12 col-md-3">
-    <div class="mp">
-      <% @project.affiliates_hash.each do |affiliate, value| %>
-        <% if value.present? %>
-          <h5><%= affiliate.upcase %></h5>
-          <p><%= value %></p>
-        <% end %>
       <% end %>
     </div>
   </div>

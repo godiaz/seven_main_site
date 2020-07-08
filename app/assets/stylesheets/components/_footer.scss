@@ -1,6 +1,6 @@
 .footer {
   min-height: 350px;
-  background: linear-gradient(#0B2446, #1B4063);
+  background: linear-gradient(#08213F, #285E9F);
   display: flex;
   align-items: center;
   padding: 50px 10px;
@@ -12,6 +12,9 @@
       flex-direction: column;
     }
   }
+}
+.proj-footer {
+  background: linear-gradient(#DC742C, #E39134);
 }
 
 .footer-info-container {

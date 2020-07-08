@@ -1,4 +1,4 @@
-<div class="project-card" style="background-image: linear-gradient(rgba(0,0,20,0.1), rgba(0,0,20,0.3)), url(<%= url_for(project.banner) %>) no-repeat center center / cover">
+<div class="project-card" style="background-image: url(<%= url_for(project.banner) %>)">
   <div class="project-card-categories">
     <% project.services.each do |service| %>
       <%= image_tag service.photo, alt: "alttext", class: "service-svg-small" %>

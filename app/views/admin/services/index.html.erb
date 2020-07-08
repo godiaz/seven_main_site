@@ -1,3 +1,5 @@
-<%= link_to "New Service", new_admin_service_path, class: "btn btn-danger mt5" %>
-<%= link_to "Projects", admin_projects_path, class: "btn btn-primary mt5" %>
-<%= render "shared/services", services: @services, admin: true %>
+<div class="seven-container">
+  <%= link_to "New Service", new_admin_service_path, class: "btn btn-danger mt5" %>
+  <%= link_to "Projects", admin_projects_path, class: "btn btn-primary mt5" %>
+  <%= render "shared/services", services: @services, admin: true %>
+</div>

@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: #08213F;
+  background: linear-gradient(#08213F, #285E9F);
   min-height: 80px;
   position: relative;
   z-index: 5;
@@ -9,7 +9,6 @@
 }
 
 #navbarSupportedContent {
-  background: #08213F;
   @include for-phone-only {
     position: relative;
     top: 8px;

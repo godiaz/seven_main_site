@@ -1,4 +1,4 @@
-<div class="footer">
+<div class="footer <%= 'proj-footer' if controller_name == 'projects' && action_name == 'show' %>">
   <div class="container">
     <%= image_tag 'seven.svg', class: 'seven-logo' %>
     <div class="footer-info-container">
@@ -23,7 +23,7 @@
       </div>
       <div class="footer-contact">
         <p class="m-0">Tel +44(0)161 209 3259</p>
-        <p class="m-0">Email: hello@sevenacademy.co.uk</p>
+        <p class="m-0">Email: nev@7consulting.co.uk</p>
       </div>
     </div>
   </div>

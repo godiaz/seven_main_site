@@ -4,48 +4,51 @@
     <h5 class="banner-details text-center"><%= @project.sub_header %></h5>
   </div>
 </div>
-<% if admin %>
-  <div style="padding: 10px;">
-    <%= link_to @project.published ? 'Unpublish' : 'Publish' , publish_admin_project_path(@project), method: :patch, class: "btn #{@project.published ? 'btn-danger' : 'btn-primary'}" %>
-    <%= link_to "Edit", edit_admin_project_path(@project), class: "btn btn-primary" %>
-  </div>
-<% end %>
-<div class="row noh">
-  <div class="col-sm-12 col-md-3">
-    <div class="mp">
-      <% @project.affiliates_hash.each do |affiliate, value| %>
-        <% if value.present? %>
-          <h5><%= affiliate.upcase %></h5>
-          <p><%= value %></p>
-        <% end %>
-      <% end %>
-    </div>
-  </div>
+<div class="seven-container">
 
-  <div class="col-sm-12 col-md-6 proj-content">
-    <div class="mp">
-      <%= simple_format @project.content %>
+  <% if admin %>
+    <div style="padding: 10px;">
+      <%= link_to @project.published ? 'Unpublish' : 'Publish' , publish_admin_project_path(@project), method: :patch, class: "btn #{@project.published ? 'btn-danger' : 'btn-primary'}" %>
+      <%= link_to "Edit", edit_admin_project_path(@project), class: "btn btn-primary" %>
     </div>
-  </div>
-  <div class="col-sm-12 col-md-3">
-    <div class="mp">
-      <% @project.services.each do |service| %>
-        <div class="service-block" style="background-color: #<%= service.color %>;">
-          <% if service.photo.attached? %>
-            <%= image_tag url_for(service.photo), class: "service-svg-small sp", alt: "seven.svg" %>
-          <% else %>
-            <%= image_tag image_path("seven.svg"), class: "service-svg-small sp" %>
-          <% end %>
-          <h5><%= service.title %></h5>
-        </div>
-      <% end %>
-    </div>
-  </div>
-</div>
-
-<div class="project-photos">
-  <% @project.photos.attachments.each do |photo| %>
-    <%= render "shared/project_photo", photo: photo %>
   <% end %>
+  <div class="row noh">
+    <div class="col-sm-12 col-md-3">
+      <div class="mp">
+        <% @project.affiliates_hash.each do |affiliate, value| %>
+          <% if value.present? %>
+            <h5><%= affiliate.upcase %></h5>
+            <p><%= value %></p>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-6 proj-content">
+      <div class="mp">
+        <%= simple_format @project.content %>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-3">
+      <div class="mp">
+        <% @project.services.each do |service| %>
+          <div class="service-block" style="background-color: #<%= service.color %>;">
+            <% if service.photo.attached? %>
+              <%= image_tag url_for(service.photo), class: "service-svg-small sp", alt: "seven.svg" %>
+            <% else %>
+              <%= image_tag image_path("seven.svg"), class: "service-svg-small sp" %>
+            <% end %>
+            <h5><%= service.title %></h5>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="project-photos">
+    <% @project.photos.attachments.each do |photo| %>
+      <%= render "shared/project_photo", photo: photo %>
+    <% end %>
+  </div>
 </div>
 

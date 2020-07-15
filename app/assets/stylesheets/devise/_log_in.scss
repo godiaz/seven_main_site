@@ -20,6 +20,9 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
+  @include for-medium-devices-down {
+    padding-bottom: 40px;
+  }
 }
 
 .devise-input {

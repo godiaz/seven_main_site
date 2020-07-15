@@ -4,7 +4,7 @@
     <h5 class="banner-details text-center"><%= @project.sub_header %></h5>
   </div>
 </div>
-<div class="seven-container">
+<div class="seven-container proj-show">
 
   <% if admin %>
     <div style="padding: 10px;">
@@ -14,10 +14,10 @@
   <% end %>
   <div class="row noh">
     <div class="col-sm-12 col-md-3">
-      <div class="mp">
+      <div class="mp  mid-lpad">
         <% @project.affiliates_hash.each do |affiliate, value| %>
           <% if value.present? %>
-            <h5><%= affiliate.upcase %></h5>
+            <h5 class="proj-atts"><%= affiliate.upcase %></h5>
             <p><%= value %></p>
           <% end %>
         <% end %>
@@ -25,12 +25,13 @@
     </div>
 
     <div class="col-sm-12 col-md-6 proj-content">
-      <div class="mp">
+      <div class="mp hpm">
         <%= simple_format @project.content %>
       </div>
     </div>
     <div class="col-sm-12 col-md-3">
-      <div class="mp">
+      <div class="mp mid-lpad">
+        <h5 class="proj-atts">SERVICES PROVIDED</h5>
         <% @project.services.each do |service| %>
           <div class="service-block" style="background-color: #<%= service.color %>;">
             <% if service.photo.attached? %>

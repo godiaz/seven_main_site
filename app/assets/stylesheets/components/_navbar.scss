@@ -1,13 +1,16 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: linear-gradient(#08213F, #285E9F);
   min-height: 80px;
   position: relative;
   z-index: 5;
   align-items: flex-start;
   padding-top: 18px;
+  max-width: 1220px;
+  margin: 0 auto;
 }
-
+.nav-cont {
+  background: linear-gradient(#08213F, #074188);
+}
 #navbarSupportedContent {
   @include for-phone-only {
     position: relative;

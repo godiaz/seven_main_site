@@ -18,7 +18,12 @@
     display: none;
   }
 }
-
+.mid-lpad {
+  @include for-small-devices-down {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
 .project-facts {
   width: 100%;
   padding: 16px;
@@ -84,8 +89,11 @@ html {
 
 .project-photos {
   display: flex;
-  margin: 32px 15px 32px 15px;
+  margin: 10vh 15px 13vh 15px;
   justify-content: space-between;
+  @include for-small-devices-down {
+    flex-direction: column;
+  }
 }
 
 .project-photo {
@@ -94,6 +102,9 @@ html {
   background-position: center;
   background-size: cover;
   cursor: pointer;
+  @include for-small-devices-down {
+    margin: 0 auto;
+  }
 }
 
 .photo-modal {
@@ -110,4 +121,12 @@ html {
   position: absolute;
   top: 8px;
   right: 16px;
+}
+.project-card-title {
+  font-size: 1.15rem;
+  margin-bottom: 0;
+}
+.project-card-description {
+  font-size: 0.8rem;
+  margin-bottom: 0;
 }

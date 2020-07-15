@@ -33,6 +33,7 @@
 
 .min-height {
   min-height: calc(100vh - 430px);
+  background-color: white;
 }
 
 .seven-container {
@@ -52,6 +53,8 @@
 
 
 .services-container-home {
+  max-width: 1220px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr ;
   @media only screen and (min-width: 700px) {

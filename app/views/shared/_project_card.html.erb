@@ -5,7 +5,7 @@
     <% end %>
   </div>
   <div class="project-card-details">
-    <h5 class="project-card-title"><%= project.name %></h5>
+    <h6 class="project-card-title"><%= project.name %></h6>
     <p class="project-card-description"><%= project.location %> | <%= project.services.map { |p| p.title }.split(',').join(' | ') %></p>
   </div>
 </div>

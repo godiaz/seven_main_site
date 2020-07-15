@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
   def home
     @projects = Project.where(published: true).first(6)
-    @element_height = "200px"
+    @element_height = "400px"
     @sm_count = 1
     @md_count = 3
     @lg_count = 3

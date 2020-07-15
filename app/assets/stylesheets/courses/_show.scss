@@ -187,9 +187,17 @@
   width: 65px;
 }
 .noh {
+  padding-top: 8vh;
   margin: 0;
 }
-
+.proj-show {
+  max-width: 1220px;
+}
+.proj-atts {
+  font-size: 1rem;
+  margin-bottom: 0px;
+  font-weight: bold;
+}
 .thirty {
   display: flex;
   flex-direction: column;
@@ -243,7 +251,10 @@
   height: 200px;
 }
 
-
+.hpm {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
 
 
 

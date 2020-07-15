@@ -10,8 +10,8 @@
         <%= image_tag service.photo, alt: "alttext", class: "service-svg-vsmall" %>
       <% end %>
     </div>
-    <h4><%= element.name %></h4>
-    <h6><%= element.services_sentence %></h6>
+    <h5><%= element.name %></h5>
+    <p><%= element.location %> | <%= element.services_sentence %></p>
   <% end %>
 <% else %>
   <div
@@ -26,8 +26,8 @@
         <%= image_tag service.photo, alt: "alttext", class: "service-svg-vsmall" %>
       <% end %>
     </div>
-    <h4><%= element.name %></h4>
-    <h6><%= element.services_sentence %></h6>
+    <h5><%= element.name %></h5>
+    <p><%= element.location %> | <%= element.services_sentence %></p>
   </div>
 <% end %>
 

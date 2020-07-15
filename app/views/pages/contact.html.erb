@@ -1,12 +1,12 @@
 <div class="devise-wrapper">
-  <div class="top-banner" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)), url(<%= asset_path('contact_cover.webp') %>); background-size: cover; background-position: center;">
+  <div class="top-banner" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)), url(<%= asset_path('seven-main.jpg') %>); background-size: cover; background-position: center;">
     <div class="banner-text">
-      <h1 class="text-center">WE'D LOVE TO HEAR FROM YOU</h1>
-      <h5 class="text-center">Whether you need help with the site, have a question about a course, have a suggestion for a future course or want to discuss how we can tailor a CPD solution for your company, don’t hesitate to get in touch.<br><br>Please use the form below and we’ll get back to you as soon as we can.<br><br>Thanks</h5>
+      <h1 class="text-center"><strong>CONTACT</strong></h1>
+      <h5 class="text-center">Please feel free to contact Seven Consulting if you <br> have any questions about how we can help your project.</h5>
     </div>
   </div>
   <div class="devise-form">
-    <h2 class="text-center mb-5">How can we help?</h2>
+    <h2 class="text-center mb-5 dark-blue">How can we help?</h2>
     <%= simple_form_for :contact, url: contact_path, method: :post, html: { class: "contact-form" } do |f| %>
       <div class="form-inputs">
         <%= f.input :name, required: false, input_html: { class: "devise-input" }, placeholder: "John Doe", label: false %>

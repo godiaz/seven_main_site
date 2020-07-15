@@ -1,29 +1,31 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon <%= 'proj-footer' if controller_name == 'projects' && action_name == 'show' %>">
-  <%= link_to root_path, class: "navbar-brand" do %>
-    <%= image_tag "seven.svg", class: 'seven-logo' %>
-  <% end %>
+<div class="nav-cont <%= 'proj-footer' if controller_name == 'projects' && action_name == 'show' %>">
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon ">
+    <%= link_to root_path, class: "navbar-brand" do %>
+      <%= image_tag "seven.svg", class: 'seven-logo' %>
+    <% end %>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item flex-center active">
-        <%= link_to "HOME", root_path, class: "nav-link white-imp flex-lm" %>
-      </li>
-      <li class="nav-item flex-center active">
-        <%= link_to "SERVICES", services_path, class: "nav-link white-imp flex-lm" %>
-      </li>
-      <li class="nav-item flex-center active">
-        <%= link_to "PROJECTS", projects_path, class: "nav-link white-imp flex-lm" %>
-      </li>
-      <li class="nav-item flex-center active">
-        <%= link_to "ACADEMY", "https://sevenacademy.co.uk/", class: "nav-link white-imp flex-lm", target: "_blank" %>
-      </li>
-      <li class="nav-item flex-center active">
-        <%= link_to "CONTACT", contact_path, class: "nav-link white-imp flex-lm" %>
-      </li>
-    </ul>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item flex-center active">
+          <%= link_to "HOME", root_path, class: "nav-link white-imp flex-lm" %>
+        </li>
+        <li class="nav-item flex-center active">
+          <%= link_to "SERVICES", services_path, class: "nav-link white-imp flex-lm" %>
+        </li>
+        <li class="nav-item flex-center active">
+          <%= link_to "PROJECTS", projects_path, class: "nav-link white-imp flex-lm" %>
+        </li>
+        <li class="nav-item flex-center active">
+          <%= link_to "ACADEMY", "https://sevenacademy.co.uk/", class: "nav-link white-imp flex-lm", target: "_blank" %>
+        </li>
+        <li class="nav-item flex-center active">
+          <%= link_to "CONTACT", contact_path, class: "nav-link white-imp flex-lm" %>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>

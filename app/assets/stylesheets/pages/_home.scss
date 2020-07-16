@@ -30,7 +30,9 @@
   display: none;
   z-index: 0;
 }
-
+.place::placeholder {
+  padding-top: 10px;
+}
 .min-height {
   min-height: calc(100vh - 430px);
   background-color: white;

@@ -5,21 +5,20 @@
       <h5 class="text-center">Please feel free to contact Seven Consulting if you have any questions about how we can help your project.</h5>
     </div>
   </div>
-  <h2 class="text-center dark-blue con-hed pt20"><strong>How can we help?</strong></h2>
-  <div class="row" style="max-width: 1220px;margin: 0 auto;">
+  <div class="row" style="max-width: 1220px;margin: 0 auto;padding-top: 5vh;">
     <div class="col-sm-12 col-md-6">
       <div class="devise-form">
         <h3 class="text-center mb-4 dark-blue">Leave us a message</h3>
         <%= simple_form_for :contact, url: contact_path, method: :post, html: { class: "contact-form" } do |f| %>
           <div class="form-inputs">
-            <%= f.input :name, required: false, input_html: { class: "devise-input" }, placeholder: "John Exampleson", label: false %>
-            <%= f.input :email, required: false, input_html: { class: "devise-input" }, placeholder: "john@example.com", label: false %>
+            <%= f.input :name, required: false, input_html: { class: "devise-input" }, placeholder: "Your name", label: false %>
+            <%= f.input :email, required: false, input_html: { class: "devise-input" }, placeholder: "Your email", label: false %>
           </div>
           <div class="form-inputs">
-            <%= f.input :phone, required: false, input_html: { class: "devise-input" }, placeholder: "07785 673 357", label: false %>
-            <%= f.input :location, required: false, input_html: { class: "devise-input" }, placeholder: "London", label: false %>
+            <%= f.input :phone, required: false, input_html: { class: "devise-input" }, placeholder: "Your phone number", label: false %>
+            <%= f.input :location, required: false, input_html: { class: "devise-input" }, placeholder: "Project location", label: false %>
           </div>
-          <%= f.input :message, as: :text, required: false, input_html: { class: "devise-input", rows: 10 }, label: false, placeholder: "Your message here...."  %>
+          <%= f.input :message, as: :text, required: false, input_html: { class: "devise-input place", rows: 10 }, label: false, placeholder: "Tell us about your project"  %>
           <%= f.input :attachment, as: :file, required: false %>
           <%= f.button :submit, "SEND", class: "seven-button devise-button mb-4" %>
         <% end %>

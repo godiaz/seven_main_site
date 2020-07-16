@@ -26,6 +26,7 @@
           </div>
           <%= f.input :banner %>
           <p></p>
+          <p>The alphabetical order of the photo file names determines the order in which they will appear</p>
           <%= f.input :photos, as: :file, input_html: { multiple: true }, label: "Photos (max 4)" %>
           <!-- Inject categories here -->
           <%= f.input :content, placeholder: "In this tutorial..." %>

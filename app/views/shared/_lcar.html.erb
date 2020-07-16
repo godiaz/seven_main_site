@@ -1,4 +1,4 @@
-<div id='lcar' class="lcar" data-sm='<%= sm_count %>' data-md='<%= md_count %>' data-lg='<%= lg_count %>' data-xl='<%= xl_count %>' data-scroll='<%= ms_per_scroll %>' >
+<div id='lcar' class="lcar" data-sm='<%= sm_count %>' data-md='<%= md_count %>' data-lg='<%= lg_count %>' data-xl='<%= xl_count %>' data-scroll='<%= ms_per_scroll %>' style="<%= 'max-width: unset;' if full %>" >
   <% elements.each do |element| %>
     <%= render "admin/shared/lcar_element",
       element: element,

@@ -1,9 +1,4 @@
 <div class="project-card" style="background-image: url(<%= url_for(project.banner) %>)">
-  <div class="project-card-categories">
-    <% project.services.each do |service| %>
-      <%= image_tag service.photo, alt: "alttext", class: "service-svg-vsmall" %>
-    <% end %>
-  </div>
   <div class="project-card-details">
     <h6 class="project-card-title"><%= project.name %></h6>
     <p class="project-card-description"><%= project.location %> | <%= project.services.map { |p| p.title }.split(',').join(' | ') %></p>

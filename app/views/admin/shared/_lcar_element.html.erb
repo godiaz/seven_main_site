@@ -3,13 +3,7 @@
     class: "element",
     style: "height: #{height};
     width: #{(1 / sm_count) * 100}%;
-    background-color: #{background_color};
     background-image: url(#{url_for(element.banner)})" do %>
-    <div class="project-card-categories">
-      <% element.services.each do |service| %>
-        <%= image_tag service.photo, alt: "alttext", class: "service-svg-vsmall" %>
-      <% end %>
-    </div>
     <h5><%= element.name %></h5>
     <p><%= element.location %> | <%= element.services_sentence %></p>
   <% end %>
@@ -19,13 +13,7 @@
     style="
       height: <%= height %>;
       width: <%= (1 / sm_count) * 100 %>%;
-      background-color: <%= background_color %>;
     ">
-    <div class="project-card-categories">
-      <% element.services.each do |service| %>
-        <%= image_tag service.photo, alt: "alttext", class: "service-svg-vsmall" %>
-      <% end %>
-    </div>
     <h5><%= element.name %></h5>
     <p><%= element.location %> | <%= element.services_sentence %></p>
   </div>

@@ -1,15 +1,23 @@
 .project-card {
   flex-shrink: 0;
   height: 260px;
+  display:flex;
   position: relative;
   color: #fff;
   cursor: pointer;
   opacity: 1;
   background-size: cover;
   transition: opacity 0.5s ease-in-out;
-  &:hover {
-    opacity: 0.7;
-  }
+}
+.project-card:before {
+  content: "";
+  width: 100%;
+  background: #2db5b9;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+.project-card:hover:before {
+  opacity:0.5;
 }
 
 .project-card-categories {

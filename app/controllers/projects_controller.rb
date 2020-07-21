@@ -7,7 +7,7 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.friendly.find(params[:id])
-    @projects = Project.includes(:services).where(published: true) - @project
+    @projects = Project.includes(:services).where(published: true).where.not(id: @project.id)
   end
 
 end
